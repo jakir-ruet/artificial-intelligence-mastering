@@ -38,8 +38,6 @@ Machine Learning (ML) is a subset of Artificial Intelligence (AI) that allows co
   - **Examples:** Logistic Regression, Decision Tree, Random Forest, SVM, Neural Networks
   - **Use Case:** Email spam detection, image recognition
 
----
-
 2. **Unsupervised Learning** > Learns from unlabeled data; finds patterns or structures. Discover hidden patterns, clusters, or structure in data.
 
 - **Clustering**
