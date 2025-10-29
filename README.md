@@ -43,15 +43,19 @@ Be comfortable writing and debugging Python code for data and ML.
 
 #### Machine Learning (ML)
 
-Understand supervised and unsupervised learning & apply classical models.
+Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience. To develop a solid understanding of `machine learning`, we should have a good grasp of the following key topics.
 
-![Machine Learning Workflow](/img/ml-workflow-summary.jpg)
+- Machine Learning Topics
+
+![Machine Learning Workflow](/img/ml-topics.jpg)
 
 #### Deep Learning (DL)
 
-Train deep models for vision, text, or audio tasks.
+Deep Learning is a specialized subfield of machine learning that focuses on algorithms inspired by the structure and function of the human brain, known as artificial neural networks. It involves training these multi-layered networks (called deep neural networks) to automatically learn hierarchical patterns and representations from large amounts of data. To develop a solid understanding of `deep learning`, we should have a good grasp of the following key topics.
 
-![Deep Learning Workflow](/img/dl-workflow-summary.jpg)
+- Deep Learning Topics
+
+![Deep Learning Workflow](/img/dl-topics.jpg)
 
 #### Tools & Frameworks
 
