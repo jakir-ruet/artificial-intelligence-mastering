@@ -13,7 +13,6 @@ AI is a broad field. The core components you'll need to master include:
 - 🧮 Mathematics
 - 💻 Programming
 - 🤖 Machine Learning (ML)
-- 🧠 Neural Networks (NN)
 - 🔍 Deep Learning (DL)
 - 🧰 Tools & Frameworks
 - 💼 Projects
@@ -46,35 +45,13 @@ Be comfortable writing and debugging Python code for data and ML.
 
 Understand supervised and unsupervised learning & apply classical models.
 
-| **Topic**                 | **Algorithms**                                          | **Tools**    |
-| ------------------------- | ------------------------------------------------------- | ------------ |
-| **Supervised Learning**   | Linear regression, decision trees, SVM, k-NN            | Scikit-learn |
-| **Unsupervised Learning** | K-means, PCA, clustering                                | Scikit-learn |
-| **Model Evaluation**      | Accuracy, precision, recall, F1-score, confusion matrix | —            |
-| **Cross-validation**      | Bias-variance trade-off                                 | —            |
-
-#### Neural Networks (NN)
-
-Understand basic NN architecture and how learning happens.
-
-| **Concept**              | **What to Learn**                    |
-| ------------------------ | ------------------------------------ |
-| **Neurons & Layers**     | Input, hidden, and output layers     |
-| **Forward Propagation**  | How data flows through the network   |
-| **Backpropagation**      | Gradient descent, error minimization |
-| **Activation Functions** | ReLU, Sigmoid, Tanh                  |
-| **Loss Functions**       | MSE, Cross-Entropy                   |
+![Machine Learning Workflow](/img/ml-workflow-summary.jpg)
 
 #### Deep Learning (DL)
 
 Train deep models for vision, text, or audio tasks.
 
-| **Architecture**                           | **Use Case**                              |
-| ------------------------------------------ | ----------------------------------------- |
-| **CNNs (Convolutional Neural Networks)**   | Image classification, object detection    |
-| **RNNs, LSTM (Recurrent Neural Networks)** | Sequence modeling, time series            |
-| **Transformers**                           | NLP (BERT, GPT), attention mechanism      |
-| **Autoencoders, GANs**                     | Dimensionality reduction, data generation |
+![Deep Learning Workflow](/img/dl-workflow-summary.jpg)
 
 #### Tools & Frameworks
 
