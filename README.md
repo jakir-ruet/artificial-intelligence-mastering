@@ -13,6 +13,7 @@ AI is a broad field. The core components you'll need to master include:
 - 🧮 Mathematics
 - 💻 Programming
 - 🤖 Machine Learning (ML)
+- 🧠 Neural Networks (NN)
 - 🔍 Deep Learning (DL)
 - 🧰 Tools & Frameworks
 - 💼 Projects
@@ -48,6 +49,18 @@ Machine Learning is a branch of artificial intelligence (AI) that enables comput
 - Machine Learning Topics
 
 ![Machine Learning Workflow](/img/ml-topics.jpg)
+
+#### Neural Networks (NN)
+
+To develop a solid understanding of `Neural Networks`, we should have a good grasp of the following key topics.
+
+| **Concept**              | **What to Learn**                    |
+| ------------------------ | ------------------------------------ |
+| **Neurons & Layers**     | Input, hidden, and output layers     |
+| **Forward Propagation**  | How data flows through the network   |
+| **Backward propagation** | Gradient descent, error minimization |
+| **Activation Functions** | ReLU, Sigmoid, Tanh                  |
+| **Loss Functions**       | MSE, Cross-Entropy                   |
 
 #### Deep Learning (DL)
 
