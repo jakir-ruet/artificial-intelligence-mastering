@@ -10,8 +10,8 @@
 
 AI is a broad field. The core components you'll need to master include:
 
-- 🧮 Mathematics
-- 💻 Programming
+- 🧮 Mathematics for Machine Learning
+- 💻 Programming in Python
 - 🤖 Machine Learning (ML)
 - 🧠 Neural Networks (NN)
 - 🔍 Deep Learning (DL)
@@ -19,48 +19,121 @@ AI is a broad field. The core components you'll need to master include:
 - 💼 Projects
 - 🚀 Advanced Topics (NLP, Computer Vision, Reinforcement Learning)
 
-#### Mathematics for ML/DL
+#### Mathematics for Machine Learning
 
-Build core intuition to understand how algorithms work.
+1. `Linear Algebra:` Vectors, matrices, dot product, eigenvalues.
+2. `Probability & Statistics:` Distributions, Bayes’ Theorem, expectation.
+3. `Calculus Basics:` Derivatives, gradients, chain rule.
+4. `Optimization:` Gradient descent, cost functions
 
-| **Topic**                    | **Key Concepts**                            | **Resources**                                                                                                                          |
-| ---------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **Linear Algebra**           | Vectors, matrices, dot product, eigenvalues | [3Blue1Brown’s Linear Algebra](https://www.youtube.com/c/3blue1brown), [Khan Academy](https://www.khanacademy.org/math/linear-algebra) |
-| **Calculus**                 | Derivatives, gradients, chain rule          | [Khan Academy](https://www.khanacademy.org/math/calculus-1), Visual Calculus                                                           |
-| **Probability & Statistics** | Distributions, Bayes’ Theorem, expectation  | [StatQuest](https://www.youtube.com/user/joshstarmer), Khan Academy                                                                    |
-| **Optimization**             | Gradient descent, cost functions            | DeepLearning.AI specialization, ML blogs                                                                                               |
-
-#### Programming
+#### Programming in Python-[Visit](https://github.com/jakir-ruet/mastering-with-python)
 
 Be comfortable writing and debugging Python code for data and ML.
 
-| **Skill**               | **Tools/Libraries**                | **Resources**                                                                                                                                         |
-| ----------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Python**              | Basic syntax, data structures, OOP | [Codecademy](https://www.codecademy.com/learn/learn-python-3), [Real Python](https://realpython.com/), [W3Schools](https://www.w3schools.com/python/) |
-| **NumPy, Pandas**       | Data manipulation, arrays          | [Kaggle Python Course](https://www.kaggle.com/learn/python), [DataCamp](https://www.datacamp.com/)                                                    |
-| **Matplotlib, Seaborn** | Data visualization                 | YouTube, DataCamp                                                                                                                                     |
-| **Jupyter Notebooks**   | Interactive coding environment     | Use in Google Colab or VS Code                                                                                                                        |
-| **Git & GitHub**        | Version control, collaboration     | [GitHub Learning Lab](https://lab.github.com/), [freeCodeCamp](https://www.freecodecamp.org/)                                                         |
+1. Python Syntax, Python Comments, Python Variables, Python Data Types, Python Numbers, Python Casting, Python Strings, Python Booleans, Python Operators.
+2. Python Lists, Python Tuple, Python Sets, Python Dictionaries Python If...Else, Python Match.
+3. Python While Loops, Python for Loops, Python Functions, Python Lambda.
+4. Python Classes/Objects, Python Inheritance, Python Iterators Python Polymorphism.
+5. Python Polymorphism, Python Modules Python Dates, Python Math.
+6. Python JSON, Python RegEx, Python PIP, Python Try...Except.
+7. Python String Formatting, Python User Input, Python VirtualEnv.
+8. Python File Handling, Python Read Files, Python Write/Create Files Python Delete Files.
+
+##### Python Library (Programming for ML and DL)
+
+1. `Matplotlib:` (creating static, animated, and interactive plots).
+2. `Seaborn:` (high-level visualization library)
+3. `SciPy:` (scientific computing library built on NumPy)
+4. `Pandas:` (Data Frames Handles labeled data)
+5. `NumPy:` Handles numerical data (arrays, matrices).
 
 #### Machine Learning (ML)
 
-Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience. To develop a solid understanding of `machine learning`, we should have a good grasp of the following key topics.
+Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience.
 
-- Machine Learning Topics
+##### Machine Learning frameworks and model persistence tools
+
+1. `XGBoost (Extreme Gradient Boosting):` A high-performance gradient boosting library for supervised learning (especially tabular data).
+2. `LightGBM (Light Gradient Boosting Machine):` A gradient boosting framework by Microsoft - optimized for speed and low memory.
+3. `Joblib:` A tool for serializing (saving/loading) Python objects efficiently, especially large NumPy arrays or scikit-learn models.
+4. `Pickle:` A standard Python module for serializing and deserializing Python objects.
+5. `Optuna:` An automatic hyperparameter optimization library.
+6. `TensorFlow/Keras:` Google’s deep learning framework. Keras is now the official high-level API inside TensorFlow (tf.keras).
+7. `PyTorch/Torchvision:` Meta’s (Facebook’s) deep learning framework.
+8. `FastAI:` A high-level deep learning library built on top of PyTorch.
+
+##### How they fit together
+
+| **Library**               | **Type**       | **Built On**    | **Main Use**                         |
+| ------------------------- | -------------- | --------------- | ------------------------------------ |
+| **Optuna**                | Optimization   | Independent     | Hyperparameter tuning                |
+| **TensorFlow / Keras**    | Deep learning  | TensorFlow core | Neural networks, production models   |
+| **PyTorch / Torchvision** | Deep learning  | PyTorch core    | Research, flexible modeling          |
+| **FastAI**                | High-level API | PyTorch         | Quick prototyping, transfer learning |
+
+##### Machine Learning Concepts
+
+1. `Introduction to AI, ML & DL:` ML vs DL, Applications, ML pipeline, Types of ML.
+2. `Data Preprocessing & Feature Engineering:` Missing data, scaling, encoding, feature selection, dimensionality reduction.
+3. `Model Evaluation Techniques:` Train/Test/Validation split, k-Fold CV, confusion matrix, accuracy, F1, ROC, AUC.
+
+##### Machine Learning Advance Topics
+
+1. `Supervised Learning - Regression Models:` Linear Regression, Ridge, Lasso, Polynomial Regression.
+2. `Supervised Learning - Classification Models:` Logistic Regression, KNN, Decision Trees, Random Forest, SVM.
+3. `Introduction to Neural Networks:` Perceptron, Activation functions, Forward/Backward Propagation, Loss functions.
+
+##### Aditional Topics
 
 ![Machine Learning Workflow](/img/ml-topics.jpg)
+
+#### Natural Language Processing (NLP) in Python
+
+1. `NLTK (Natural Language Toolkit):` One of the oldest and most complete NLP libraries for traditional (non–deep learning) text processing.
+2. `spaCy:` An industrial-strength NLP library — faster and more efficient than NLTK.
+3. `Transformers (by Hugging Face):` A deep learning NLP library providing pretrained transformer models (BERT, GPT, RoBERTa, T5, etc.).
+4. `Sentence Transformers:` A library built on top of Hugging Face Transformers and PyTorch for generating semantic sentence embeddings.
+
+##### How they fit together
+
+| **Library**                     | **Type**            | **Key Strength**  | **Typical Use**                                    |
+| ------------------------------- | ------------------- | ----------------- | -------------------------------------------------- |
+| **NLTK**                        | Classical NLP       | Linguistic tools  | Teaching, simple preprocessing                     |
+| **spaCy**                       | Industrial NLP      | Fast pipelines    | NER, POS tagging, parsing, production NLP          |
+| **Transformers (Hugging Face)** | Deep learning NLP   | Pretrained models | Summarization, question answering, text generation |
+| **Sentence Transformers**       | Embedding-based NLP | Semantic meaning  | Semantic search, similarity, clustering            |
 
 #### Neural Networks (NN)
 
 To develop a solid understanding of `Neural Networks`, we should have a good grasp of the following key topics.
 
-| **Concept**              | **What to Learn**                    |
-| ------------------------ | ------------------------------------ |
-| **Neurons & Layers**     | Input, hidden, and output layers     |
-| **Forward Propagation**  | How data flows through the network   |
-| **Backward propagation** | Gradient descent, error minimization |
-| **Activation Functions** | ReLU, Sigmoid, Tanh                  |
-| **Loss Functions**       | MSE, Cross-Entropy                   |
+1. `Neurons & Layers:` Input, hidden, and output layers.
+2. `Forward Propagation:` How data flows through the network.
+3. `Backward propagation:` Gradient descent, error minimization.
+4. `Activation Functions:` ReLU, Sigmoid, Tanh.
+5. `Loss Functions:` MSE, Cross-Entropy.
+
+#### Modern Generative AI and Retrieval Augmented Generation (RAG) tools.
+
+These libraries power AI agents, retrieval systems, and diffusion models for text and images.
+
+1. `Diffusers (by Hugging Face):` A library for generative models — especially diffusion-based image, audio, and video generation.
+2. `LangChain:` A framework for building applications powered by large language models (LLMs).
+3. `OpenAI (Python SDK:` Official OpenAI client library for accessing GPT, DALL·E, Whisper, etc.
+4. `LlamaIndex (formerly GPT Index):` A framework for connecting LLMs to your data.
+5. `FAISS (Facebook AI Similarity Search):` A vector database library for efficient similarity search.
+6. `ChromaDB:` A lightweight open-source vector database optimized for use with LangChain and LlamaIndex.
+
+##### How they fit together
+
+| **Library**    | **Type**              | **Main Purpose**              | **Typical Use**                           |
+| -------------- | --------------------- | ----------------------------- | ----------------------------------------- |
+| **Diffusers**  | Generative Models     | Image / video generation      | Stable Diffusion, ControlNet              |
+| **LangChain**  | LLM Framework         | Build AI agents & RAG         | Orchestrate GPT + tools                   |
+| **OpenAI**     | Model API             | GPT, DALL·E, Whisper          | LLM inference and generation tasks        |
+| **LlamaIndex** | RAG Framework         | Connect data to LLMs          | Document indexing & querying              |
+| **FAISS**      | Vector Store (C++)    | Fast embedding search         | Large-scale vector retrieval              |
+| **ChromaDB**   | Vector Store (Python) | Simple local/hosted retrieval | Lightweight RAG or semantic search setups |
 
 #### Deep Learning (DL)
 
