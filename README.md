@@ -139,7 +139,7 @@ These libraries power AI agents, retrieval systems, and diffusion models for tex
 
 Deep Learning is a specialized subfield of machine learning that focuses on algorithms inspired by the structure and function of the human brain, known as artificial neural networks. It involves training these multi-layered networks (called deep neural networks) to automatically learn hierarchical patterns and representations from large amounts of data. To develop a solid understanding of `deep learning`, we should have a good grasp of the following key topics.
 
-- Deep Learning Topics
+##### Deep Learning Topics
 
 ![Deep Learning Workflow](/img/dl-topics.jpg)
 
