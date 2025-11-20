@@ -99,43 +99,9 @@ Where,
 
 ![Machine Learning Lifecycle](/img/ml-lifecyle.png)
 
-#### TalentFlow Example - Machine Learning Lifecycle
+### Let's explore individual component - Machine Learning Lifecycle
 
-1. `Problem Formulation`
-   - Define what we are predicting (e.g., a “good hire”).
-   - Example criteria:
-     - Stays longer than 1 year
-     - Performs well in evaluations
-   - Goal: Determine the prediction target.
-2. `Data: Collection & Preparation`
-   - **Foundation of any ML system.**
-   - Not just getting data, but **right and usable data**.
-   `Data Collection`
-   - Identify sources: APIs, internal databases, web scraping, third-party partners.
-   - Enterprise considerations: stakeholder collaboration, data availability, permissions.
-   - **TalentFlow example:**
-   - Historical resumes, interview notes, job descriptions, retention metrics, performance reviews.
-   `Supervised Learning`
-   - Requires labeled data (input + expected output).
-   - **TalentFlow example:** Resume + performance score.
-   `Data Preparation`
-   - Cleaning: remove duplicates, handle typos, fill missing values, anonymize personal info.
-   - Transformation: NLP on resumes, numeric scoring for interview notes, encoding retention labels.
-   - Splitting dataset: Training / Validation / Test sets.
-   - **Important:** Each step can introduce subtle issues; preparation is ongoing, not one-time.
-3. `Data Pipelines`
-- Ensure **consistency** and **scalability**.
-- Tools: Apache Airflow, dbt, Python scripts.
-4. `Effects of Poor Data Preparation`
-- Model may fail silently in production.
-- Garbage in → Garbage out.
-- Poor input leads to poor predictions and bad decisions.
-
-### Model Development & Training
-
-Model development and training is a critical part of building machine learning systems. Choosing the right model is one of the most important steps in the process. Here's a breakdown of the general approach to model selection:
-
-#### Understanding the Problem
+#### 1. `Problem Formulation`
 
 - What type of problem is this?
   Is it a classification, regression, clustering, or reinforcement learning problem?
@@ -144,9 +110,28 @@ Model development and training is a critical part of building machine learning s
 - What are the performance metrics or objectives?
   Are you optimizing for accuracy, precision, recall, F1-score, AUC, RMSE, etc.?
 
-#### Choosing a Model Type
+#### 2. `Data Collection`
 
-- Depends on:-
+- Identifying relevant data sources and pulling it into your system-
+  - APIs
+  - Internal databases
+  - Web scraping
+  - Third-party partners
+- In enterprise settings, often involves
+  - Working with stakeholders
+  - Understanding data availability and permissions
+
+#### 3. `Data Preparation`
+
+- Cleaning
+- Normalization and encoding
+- Feature extraction and transformation
+- Handling sensitive data
+- Splitting the dataset
+
+#### 4. `Model Training & Evaluation`
+
+- `Depends on`
   - The type of problem
   - The characteristics of your data
   - Trade-offs you’re willing to accept:
@@ -154,16 +139,15 @@ Model development and training is a critical part of building machine learning s
   - Performance, and
   - Resource usage
 
-##### Machine Learning Model
+- `Model Type`
+  - Linear regression
+  - Decision trees
+  - Random forests
+  - Gradient boosting machines
+  - Support vector machines
+  - Neural networks
 
-- Linear regression
-- Decision trees
-- Random forests
-- Gradient boosting machines
-- Support vector machines
-- Neural networks
-
-- Summary Comparison
+- `Summary Comparison`
 
 | **Model**             | **Type**                  | **Pros**                             | **Cons**                             | **When to Use**                     |
 | --------------------- | ------------------------- | ------------------------------------ | ------------------------------------ | ----------------------------------- |
@@ -174,7 +158,7 @@ Model development and training is a critical part of building machine learning s
 | **Random Forests**    | Classification/Regression | Reduces overfitting                  | Slow predictions, less interpretable | High accuracy needed                |
 | **Neural Networks**   | Classification/Regression | Models complex patterns              | Requires large data                  | Image, text, speech tasks           |
 
-##### Evaluation Metrics
+- `Evaluation Metrics`
 
 | **Metric**    | **What it Measures**                 | **Question it Answers**                                     | **Formula**                                                |
 | ------------- | ------------------------------------ | ----------------------------------------------------------- | ---------------------------------------------------------- |
@@ -182,6 +166,106 @@ Model development and training is a critical part of building machine learning s
 | **Precision** | Correctness of positive predictions  | When the model predicts positive, how often is it correct?  | `Precision` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑃)`                             |
 | **Recall**    | Ability to detect actual positives   | How many actual positives did the model correctly identify? | `Recall` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑁)`                                |
 | **F1 Score**  | Balance between Precision and Recall | What is the harmonic mean of precision and recall?          | `𝐹1` = 2 × (`(Precision × Recall)`/`(Precision + Recall)`) |
+
+> Imbalanced Classes: Why Accuracy Can Be Misleading
+
+When dealing with datasets where one class is much rarer than the other, accuracy becomes a poor performance metric, Example
+
+- Only 1 out of 100 candidates is successful.
+- A model that predicts everyone as unsuccessful still gets 99% accuracy
+- But it completely misses the one successful case
+- Precision and recall are more helpful in these situations
+
+- `Better Metrics in Imbalanced Settings`
+  - Precision: Of the cases predicted positive, how many are correct?
+  - Recall: Of all actual positive cases, how many did the model detect?
+  - F1 score: Harmonic mean of precision and recall.
+  - ROC-AUC / PR-AUC: Useful alternative metrics for imbalance.
+
+> Hyperparameters
+
+- Settings that control how the algorithm behaves, They are not learned from the data, Example;
+- Max depth in a decision tree
+  - Controls how many levels the tree can split
+  - Too shallow? May miss patterns
+  - Too deep? May overfit and memorize the training data
+
+> Cross-Validation
+
+Cross-validation checks whether a model generalizes well to new, unseen data.
+
+- Split the data into k subsets (folds).
+- Train on k-1 folds, test on the remaining fold.
+- Repeat until each fold has been used for testing.
+- Average the results for a more reliable performance estimate.
+
+- `Goal`
+  - Avoiding overfitting
+  - Ensuring the model performs well not only on the training data but also on unseen data.
+
+> Overfitting
+
+When a model learns the training data too well and performs poorly on new data.
+
+> Underfitting
+
+When a model is too simple to capture important patterns.
+
+#### 5. `Model Deployment`
+
+- The process of making a model accessible to whoever or whatever needs it
+- Typically done through a REST API
+- The model itself is usually packaged and hosted on a server or in the cloud
+- Common tools
+  - Docker,
+  - Kubernetes
+  - AWS SageMaker
+  - Azure ML
+  - Google Vertex AI
+- Real-Time Inference in Model Deployment
+![Real-Time Inference in Model Deployment](/img/real-inference-model-deploy.png)
+
+- Batch Inference in Model Deployment
+  - Used when predictions don’t need to happen instantly
+  - Predictions are run periodically on batches of inputs
+  - The model is deployed inside a scheduled process
+  - Runs predictions on large amounts of data at once
+  - Results are typically saved for later use
+
+#### 6. `Monitoring & Maintenance`
+
+ Continuously looking at data to see if your model is still working well after it’s been deployed
+
+- Infrastructure for logging and observability
+  - Track which inputs the model receives
+  - Log the outputs returned by the model
+  - Measure prediction latency
+  - Monitor for any error
+
+- Using Logs and Data to Evaluate Model Health
+  - Is the model still performing well?
+  - Is it making predictions within the expected latency?
+  - Has the input data changed significantly?
+  - Are certain outputs becoming skewed or biased over time?
+
+- Metrics for Monitoring Deployed Models
+  - Prediction distribution > Are the scores shifting?
+  - Data drift > Are the incoming inputs different from the training data?
+  - Concept drift > Has the underlying relationship between input and output changed?
+  - Latency and throughput > Are we meeting performance targets?
+
+#### 7. `Governance & Reproducibility`
+
+- In traditional software, version control is a given
+  - You always know what code is running and
+  - how to roll back if needed
+- ML needs same discipline, but more complex
+- We must track not just code, but also
+  - The data
+  - The model version
+  - The training process
+  - The hyperparameters
+  - The runtime environment
 
 ## Wth Regards, `Jakir`
 
