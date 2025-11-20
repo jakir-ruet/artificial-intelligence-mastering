@@ -59,7 +59,7 @@ Where,
 
 - `F1 Score` > Harmonic mean of `precision` and `recall`.
 
-`𝐹1` = 2 × ((Precision × Recall)/(Precision + Recall))
+`𝐹1` = 2 × (`(Precision × Recall)`/`(Precision + Recall)`)
 
 > Useful when you want a balance between precision and recall.
 
@@ -176,12 +176,12 @@ Model development and training is a critical part of building machine learning s
 
 ##### Evaluation Metrics
 
-| **Metric**    | **What it Measures**                 | **Question it Answers**                                       | **Formula**                                                   |
-| ------------- | ------------------------------------ | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| **Accuracy**  | Overall correctness of the model     | “Of all predictions, how many were correct?”                  | (\frac{TP + TN}{TP + TN + FP + FN})                           |
-| **Precision** | Correctness of positive predictions  | “When the model predicts positive, how often is it correct?”  | (\frac{TP}{TP + FP})                                          |
-| **Recall**    | Ability to detect actual positives   | “How many actual positives did the model correctly identify?” | (\frac{TP}{TP + FN})                                          |
-| **F1 Score**  | Balance between Precision and Recall | “What is the harmonic mean of precision and recall?”          | (2 \times \frac{Precision \times Recall}{Precision + Recall}) |
+| **Metric**    | **What it Measures**                 | **Question it Answers**                                     | **Formula**                                                |
+| ------------- | ------------------------------------ | ----------------------------------------------------------- | ---------------------------------------------------------- |
+| **Accuracy**  | Overall correctness of the model     | Of all predictions, how many were correct?                  | `Accuracy` = `(𝑇𝑃 + 𝑇𝑁)`/`(𝑇𝑃 + 𝑇𝑁 + 𝐹𝑃 + 𝐹𝑁)`             |
+| **Precision** | Correctness of positive predictions  | When the model predicts positive, how often is it correct?  | `Precision` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑃)`                             |
+| **Recall**    | Ability to detect actual positives   | How many actual positives did the model correctly identify? | `Recall` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑁)`                                |
+| **F1 Score**  | Balance between Precision and Recall | What is the harmonic mean of precision and recall?          | `𝐹1` = 2 × (`(Precision × Recall)`/`(Precision + Recall)`) |
 
 ## Wth Regards, `Jakir`
 
