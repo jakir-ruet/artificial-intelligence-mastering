@@ -5,3 +5,4 @@
 /01-data-engineering/01-data-profiling/venv/*
 /01-data-engineering/02-data-collection/venv/*
 /01-data-engineering/03-data-cleaning/venv/*
+/01-data-engineering/04-data-validation-preparation/venv/*
