@@ -89,6 +89,89 @@ Real-time ingestion is a method where data is continuously ingested and processe
 | **Architecture** | Simple pipelines, fewer moving parts           | Requires scalable, fault-tolerant architecture      |
 | **Cost**         | Usually cheaper                                | Often more expensive due to always-on systems       |
 
-### Data Cleansing and Preprocessing
+### Data Cleaning and Preprocessing
+
+#### Why Data Cleaning and Preprocessing Matters
+
+Data cleaning and preprocessing matter because they:
+
+- Improve accuracy
+- Reduce noise
+- Prevent bias
+- Help models train faster
+- Ensure reliable decision-making
+
+#### Key Techniques For Cleaning Data
+
+- Handling Missing Values `(Drop rows/Columns)`
+- Removing Duplications `(.drop_duplicates())`
+- Normalization vs Standardization
+  - Normalization: [0,1] scale (e.g., MinMaxScaler)
+  - Standardization: mean=0, std=1 (e.g., z-score)
 
 ### Data Validation and Preparation for Training
+
+#### Why Data Validation Matters
+
+- Data validation ensures input data meets the required quality before model training
+- Reduces model errors, overfitting, and unexpected behavior
+
+Helps catch:
+- Incorrect types (e.g., strings in numerical fields)
+- Invalid/missing values
+- Out-of-range or inconsistent data
+
+Validation Types:
+- Type checking
+- Range validation
+- Null checks and handling
+- Unique vs. duplicate value checks
+- Value distribution anomalies
+
+### Training Data Formats and Export
+
+| **Format**  | **Structure**        | **Type**                     | **Use Case**                                | **Pros**                                                    | **Cons**                                                    |
+| ----------- | -------------------- | ---------------------------- | ------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| **CSV**     | Flat, tabular        | Tabular                      | Classic ML tasks, spreadsheets              | Simple, human-readable, universally supported               | Not suitable for nested data; no data types; can be large   |
+| **JSON**    | Nested, hierarchical | Structured / semi-structured | NLP, APIs, event logs, configurations       | Flexible, supports complex structures                       | Harder to read, more verbose, inconsistent schemas possible |
+| **Parquet** | Columnar, binary     | Big data / tabular           | Large-scale ML pipelines, Spark, data lakes | Highly compressed, fast read/write, optimized for analytics | Not human-readable; tooling needed                          |
+
+### Environment Setup
+
+```bash
+python3 -m venv venv # Install virtual environment
+source venv/bin/activate
+```
+
+### Install Pandas
+
+```bash
+pip install --upgrade pip
+pip install pandas
+```
+
+> Tip: If you plan to use NumPy, Matplotlib, or Scikit-learn:
+
+```bash
+pip install numpy matplotlib scikit-learn
+```
+
+### Ydata profile install
+
+```bash
+pip list | grep ydata-profiling
+pip install ydata-profiling
+```
+
+### Jupyter install
+
+```bash
+pip install notebook
+jupyter notebook
+```
+
+### Deactivate env
+
+```bash
+deactivate
+```

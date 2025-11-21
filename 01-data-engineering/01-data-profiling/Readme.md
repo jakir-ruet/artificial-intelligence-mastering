@@ -1,51 +1,61 @@
-## Environment Setup
+## Data Profiling
+
+This module demonstrates automated data profiling techniques using the `ydata-profiling` library.
+
+## Files
+
+- `data-profiling.py`: Main script for generating data profile reports
+- `index.html`: Generated HTML report of the tips dataset
+
+## What You'll Learn
+
+- How to perform automated data quality assessment
+- Understanding data distributions and patterns
+- Identifying missing values and outliers
+- Generating comprehensive data reports
+
+## Key Concepts
+
+### Data Profiling
+
+Data profiling is the process of examining data to understand its structure, content, and quality. The `ydata-profiling` library automates this process by generating detailed reports that include:
+
+- `Dataset Overview`: Basic statistics and information
+- `Variable Analysis`: Individual column analysis
+- `Correlations`: Relationships between variables
+- `Missing Values`: Identification and patterns
+- `Sample Data`: Preview of actual data
+
+## Usage
 
 ```bash
-python3 -m venv venv # Install virtual environment
-source venv/bin/activate
+python data-profiling.py
 ```
 
-```bash
-pip3 install virtualenv
-```
+This script will:
+1. Load the tips dataset from seaborn
+2. Generate a comprehensive profile report
+3. Save the report as an HTML file
 
-```bash
-virtualenv venv
-```
+## Output
 
-```bash
-source venv/bin/activate
-```
+The script generates `index.html` which contains:
+- Interactive data visualizations
+- Statistical summaries
+- Data quality metrics
+- Correlation matrices
+- Missing value analysis
 
-## Install Pandas
+## Dependencies
 
-```bash
-pip install --upgrade pip
-pip install pandas
-```
+- `pandas`: Data manipulation
+- `ydata-profiling`: Automated data profiling
+- `seaborn`: Sample dataset (tips)
 
-> Tip: If you plan to use NumPy, Matplotlib, or Scikit-learn:
+## Learning Outcomes
 
-```bash
-pip install numpy matplotlib scikit-learn
-```
-
-## Ydata profile install
-
-```bash
-pip list | grep ydata-profiling
-pip install ydata-profiling
-```
-
-## Jupyter install
-
-```bash
-pip install notebook
-jupyter notebook
-```
-
-## Deactivate env
-
-```bash
-deactivate
-```
+After completing this module, you'll understand:
+- How to assess data quality automatically
+- The importance of data profiling in ML workflows
+- How to interpret profiling reports
+- Best practices for data exploration
