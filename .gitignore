@@ -1,3 +1,5 @@
 /.vscode
 /.idea
 /.DS_Store*
+
+/01-data-engineering/data-eng-ml/01-data-profiling/venv/*
