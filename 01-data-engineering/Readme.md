@@ -60,6 +60,35 @@ Outputs of data profiling:
 
 ### Data Collection and Gathering
 
+#### Common Methods of Data Collection
+
+- `Databases` > SQL and NoSQL databases.
+- `APIs` > REST data
+- `Flat Files` > CSV, JSON and XML Logs files
+- `Streaming Data` > Sensors, Kafka and Webbooks.
+
+#### Batch Ingestion
+
+Batch ingestion is a data ingestion method where data is collected over a period of time (e.g., hourly, daily) and then processed all at once in bulk.
+It’s useful for large volumes of data that don’t need immediate processing.
+
+#### Real-time Ingestion
+
+Real-time ingestion is a method where data is continuously ingested and processed the moment it arrives. It’s used when low latency is critical, such as fraud detection or live dashboards.
+
+#### Batch vs. Real-time Ingestion
+
+| Aspect           | **Batch Ingestion**                            | **Real-time Ingestion**                             |
+| ---------------- | ---------------------------------------------- | --------------------------------------------------- |
+| **How it works** | Runs on a **schedule** (hourly, daily, weekly) | Ingests data **continuously** as events happen      |
+| **Latency**      | High latency (minutes to hours)                | Very low latency (milliseconds to seconds)          |
+| **Use Cases**    | Reporting, analytics, data warehousing         | Fraud detection, recommendation systems, monitoring |
+| **Data Volume**  | Handles **large volumes** at once              | Handles **continuous streams** of smaller events    |
+| **Complexity**   | Easier to design, implement, and debug         | More complex; requires real-time pipelines          |
+| **Tools**        | Airflow, AWS Glue, Spark Batch, cron jobs      | Kafka, Kinesis, Flink, Spark Streaming              |
+| **Architecture** | Simple pipelines, fewer moving parts           | Requires scalable, fault-tolerant architecture      |
+| **Cost**         | Usually cheaper                                | Often more expensive due to always-on systems       |
+
 ### Data Cleansing and Preprocessing
 
 ### Data Validation and Preparation for Training

@@ -20,6 +20,7 @@ source venv/bin/activate
 ## Install Pandas
 
 ```bash
+pip install --upgrade pip
 pip install pandas
 ```
 
