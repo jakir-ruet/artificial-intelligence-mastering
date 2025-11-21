@@ -4,9 +4,9 @@ This module covers data ingestion techniques from multiple sources including CSV
 
 ## Files
 
-- `ingest-csv.py`: Demonstrates CSV data loading and basic analysis
-- `ingest-api.py`: Shows how to fetch data from REST APIs
-- `hris.csv`: Sample HRIS (Human Resources Information System) dataset
+- `ingest-csv.py:` Demonstrates CSV data loading and basic analysis
+- `ingest-api.py:` Shows how to fetch data from REST APIs
+- `hris.csv:` Sample HRIS (Human Resources Information System) dataset
 
 ## What You'll Learn
 
@@ -61,8 +61,8 @@ The `hris.csv` file contains sample human resources data that demonstrates:
 
 ## Dependencies
 
-- `pandas`: Data manipulation and analysis
-- `requests`: HTTP library for API calls
+- `pandas:` Data manipulation and analysis
+- `requests:` HTTP library for API calls
 
 ## Learning Outcomes
 

@@ -4,8 +4,8 @@ This module demonstrates automated data profiling techniques using the `ydata-pr
 
 ## Files
 
-- `data-profiling.py`: Main script for generating data profile reports
-- `index.html`: Generated HTML report of the tips dataset
+- `data-profiling.py:` Main script for generating data profile reports
+- `index.html:` Generated HTML report of the tips dataset
 
 ## What You'll Learn
 
@@ -20,11 +20,11 @@ This module demonstrates automated data profiling techniques using the `ydata-pr
 
 Data profiling is the process of examining data to understand its structure, content, and quality. The `ydata-profiling` library automates this process by generating detailed reports that include:
 
-- `Dataset Overview`: Basic statistics and information
-- `Variable Analysis`: Individual column analysis
-- `Correlations`: Relationships between variables
-- `Missing Values`: Identification and patterns
-- `Sample Data`: Preview of actual data
+- `Dataset Overview:` Basic statistics and information
+- `Variable Analysis:` Individual column analysis
+- `Correlations:` Relationships between variables
+- `Missing Values:` Identification and patterns
+- `Sample Data:` Preview of actual data
 
 ## Usage
 
@@ -48,9 +48,9 @@ The script generates `index.html` which contains:
 
 ## Dependencies
 
-- `pandas`: Data manipulation
-- `ydata-profiling`: Automated data profiling
-- `seaborn`: Sample dataset (tips)
+- `pandas:` Data manipulation
+- `ydata-profiling:` Automated data profiling
+- `seaborn:` Sample dataset (tips)
 
 ## Learning Outcomes
 

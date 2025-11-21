@@ -38,10 +38,10 @@ In Simple terms
 `Accuracy` = `(𝑇𝑃 + 𝑇𝑁)`/`(𝑇𝑃 + 𝑇𝑁 + 𝐹𝑃 + 𝐹𝑁)`
 
 Where,
-- `TP`: True Positive (correctly predicted `yes`)
-- `TN`: True Negative (correctly predicted `no`)
-- `FP`: False Positive (incorrectly predicted `yes`)
-- `FN`: False Negative (missed a `yes`)
+- `TP:` True Positive (correctly predicted `yes`)
+- `TN:` True Negative (correctly predicted `no`)
+- `FP:` False Positive (incorrectly predicted `yes`)
+- `FN:` False Negative (missed a `yes`)
 
 > Works well when classes are balanced. Misleading for imbalanced data (e.g., 99% non-fraud, 1% fraud).
 

@@ -2,7 +2,10 @@
 /.idea
 /.DS_Store*
 
-/01-data-engineering/01-data-profiling/venv/*
-/01-data-engineering/02-data-collection/venv/*
-/01-data-engineering/03-data-cleaning/venv/*
-/01-data-engineering/04-data-validation-preparation/venv/*
+/01-data-engineering/01-collection-training/01-data-profiling/venv/*
+/01-data-engineering/01-collection-training/02-data-collection/venv/*
+/01-data-engineering/01-collection-training/03-data-cleaning/venv/*
+/01-data-engineering/01-collection-training/04-data-validation-preparation/venv/*
+
+/01-data-engineering/02-ingestion-pipeline/01-ingestion-multiple-src/venv/*
+/01-data-engineering/02-ingestion-pipeline/02-feature-engineering/venv/*
