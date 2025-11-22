@@ -40,7 +40,7 @@ ELT is a modern data integration process where data is extracted from sources, l
 - Modular cleaning and transformation logic
 - Unified output
 
-![Data Validation and Preparation](/img/valid-prep-raining.png)
+![Data Validation and Preparation](/img/valid-prep-training.png)
 
 ### Feature Engineering and Validation in Pipelines
 
@@ -54,3 +54,21 @@ ELT is a modern data integration process where data is extracted from sources, l
 - Encoding Categorical Variables
 - Handling Missing Data
 - Basic Transformations
+
+### Automation and Orchestration in Scalable Data Pipelines
+
+Why automation matters in ML data pipelines
+- Choosing the right tool:
+  - `Apache Airflow:` DAG-based scheduling and monitoring
+  - `Prefect:` Lightweight, Pythonic orchestration
+  - `Cron Jobs:` Simple, OS-level task scheduling
+- Real-world use cases
+  - ETL jobs
+  - Nightly retraining
+  - Data quality scans
+
+![Building Scalable Data Pipelines](/img/scalable-pipeline.png)
+
+#### Building a Simplified Batch Pipeline in Python
+
+![Batch Pipeline in Python](/img/simple-batch-pipeline.png)
