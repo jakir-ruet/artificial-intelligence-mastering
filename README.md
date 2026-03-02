@@ -86,6 +86,33 @@ In Simple terms
 - `Unsupervised` → Student discovers patterns
 - `Reinforcement` → Learn by reward & punishment
 
+#### Large Language Model - `LLM`
+
+An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families:
+GPT models, LLaMA, Claude, Mistral, Gemini etc.
+
+> Key Characteristics
+
+- `Large` → trained on billions or trillions of words
+- `Language` → works with human text (English, Bangla, etc.)
+- `Model` → a mathematical neural network that learns patterns
+
+##### LLM Workflow (Real System)
+
+```bash
+User Prompt
+     ↓
+Tokenization
+     ↓
+Transformer Processing
+     ↓
+Probability Calculation
+     ↓
+Next Token Prediction
+     ↓
+Generated Response
+```
+
 ##### Machine Learning frameworks and model persistence tools
 
 1. `XGBoost (Extreme Gradient Boosting):` A high-performance gradient boosting library for supervised learning (especially tabular data).
@@ -510,4 +537,5 @@ Dive deeper into specialized AI domains.
 [facebook-url-jakir]: https://www.facebook.com/jakir.ruet/
 [youtube-shield-jakir]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
 [youtube-url-jakir]: https://www.youtube.com/@mjakaria-ruet/featured
+
 
