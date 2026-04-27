@@ -1,0 +1,6 @@
+id,name,age,department,salary,date
+1,John,28,IT,50000,2024-01-01
+2,Alice,,HR,40000,2024-01-02
+3,Bob,35,IT,,2024-01-03
+4,Eve,29,Finance,60000,2024-01-04
+5,Tom,40,HR,45000

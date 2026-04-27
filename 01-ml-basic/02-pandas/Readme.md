@@ -15,7 +15,15 @@ jupyter notebook --allow-root
 
 ### Pandas
 
-Pandas is a powerful Python library used for data analysis and manipulation. It’s especially popular in data science, machine learning, and analytics workflows.
+Pandas is a powerful Python library used for data analysis and manipulation. It’s especially popular in data science, machine learning, and analytics workflows. Pandas is like combination of `Excel + SQL + Python`.
+
+```python
+import pandas as pd
+
+data = {'name': ['A', 'B'], 'age': [20, 25]}
+df = pd.DataFrame(data)
+print(df)
+```
 
 **Key Features:**
 
@@ -45,7 +53,10 @@ Pandas is a powerful Python library used for data analysis and manipulation. It�
 | **Creation Example** | `pd.Series([1,2,3])`                        | `pd.DataFrame({...})`                            |
 | **Analogy**          | Excel column                                | Excel sheet                                      |
 
-### Jupyter?
+> A Series is like a single column in Excel.
+> A DataFrame is like a table Excel.
+
+### Jupyter
 
 Jupyter is a web-based interactive computing platform used to write and run code.
 
