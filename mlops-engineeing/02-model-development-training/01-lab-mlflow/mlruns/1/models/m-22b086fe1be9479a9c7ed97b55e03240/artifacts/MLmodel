@@ -1,0 +1,23 @@
+artifact_path: /Volumes/Resources/Projects/mlops-mastering/02-model-development-training/01-lab-mlflow/mlruns/1/models/m-22b086fe1be9479a9c7ed97b55e03240/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.11.1
+model_id: m-22b086fe1be9479a9c7ed97b55e03240
+model_size_bytes: 143416
+model_uuid: m-22b086fe1be9479a9c7ed97b55e03240
+prompts: null
+run_id: 9467b0e59ca942c0b88dd8aa1cc7ecff
+utc_time_created: '2026-04-26 14:15:11.469279'

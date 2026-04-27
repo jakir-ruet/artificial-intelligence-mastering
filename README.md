@@ -6,7 +6,7 @@
 
 ![AI Model](/img/ai-model.png)
 
-#### OVERVIEW
+## OVERVIEW
 
 AI is a broad field. The core components you'll need to master include:
 
@@ -19,14 +19,14 @@ AI is a broad field. The core components you'll need to master include:
 - 💼 Projects
 - 🚀 Advanced Topics (NLP, Computer Vision, Reinforcement Learning)
 
-#### Mathematics for Machine Learning
+### Mathematics for Machine Learning
 
 1. `Linear Algebra:` Vectors, matrices, dot product, eigenvalues.
 2. `Probability & Statistics:` Distributions, Bayes’ Theorem, expectation.
 3. `Calculus Basics:` Derivatives, gradients, chain rule.
 4. `Optimization:` Gradient descent, cost functions
 
-#### Programming in Python-[Visit](https://github.com/jakir-ruet/mastering-with-python)
+### Programming in Python-[Visit](https://github.com/jakir-ruet/mastering-with-python)
 
 Be comfortable writing and debugging Python code for data and ML.
 
@@ -39,7 +39,7 @@ Be comfortable writing and debugging Python code for data and ML.
 7. Python String Formatting, Python User Input, Python VirtualEnv.
 8. Python File Handling, Python Read Files, Python Write/Create Files Python Delete Files.
 
-##### Python Library (Programming for ML and DL)
+### Python Library (Programming for ML and DL)
 
 1. `Matplotlib:` (creating static, animated, and interactive plots).
 2. `Seaborn:` (high-level visualization library)
@@ -47,7 +47,7 @@ Be comfortable writing and debugging Python code for data and ML.
 4. `Pandas:` (Data Frames Handles labeled data)
 5. `NumPy:` Handles numerical data (arrays, matrices).
 
-#### Machine Learning (ML)
+### Machine Learning (ML)
 
 Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience.
 
@@ -57,7 +57,7 @@ In Simple terms
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | You give the computer `rules` + `data` → it produces an `answer`. | You give the computer `data` + `answers` → it learns the `rules`. |
 
-##### How Machine Learning Works (at a high level)
+### How Machine Learning Works (at a high level)
 
 1. Collect Data > (e.g., customer info, images, text)
 2. Prepare Data > Clean, normalize, and split into training/testing sets.
@@ -66,7 +66,7 @@ In Simple terms
 5. Test the Model > Evaluate accuracy on new (unseen) data.
 6. Use the Model > Make predictions or decisions automatically.
 
-##### Main Types of Machine Learning
+### Main Types of Machine Learning
 
 | **Type**                   | **What it does**                              | **Example**                                  |
 | -------------------------- | --------------------------------------------- | -------------------------------------------- |
@@ -86,7 +86,7 @@ In Simple terms
 - `Unsupervised` → Student discovers patterns
 - `Reinforcement` → Learn by reward & punishment
 
-#### Large Language Model - `LLM`
+## Large Language Model - `LLM`
 
 An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families:
 GPT models, LLaMA, Claude, Mistral, Gemini etc.
@@ -97,7 +97,7 @@ GPT models, LLaMA, Claude, Mistral, Gemini etc.
 - `Language` → works with human text (English, Bangla, etc.)
 - `Model` → a mathematical neural network that learns patterns
 
-##### LLM Workflow (Real System)
+### LLM Workflow (Real System)
 
 ```bash
 User Prompt
@@ -113,7 +113,36 @@ Next Token Prediction
 Generated Response
 ```
 
-##### Machine Learning frameworks and model persistence tools
+```bash
+| Step                           | What Happens                                        | Example                                                                                   |
+| ------------------------------ | --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **1. User Prompt**             | You enter text                                      | `Explain Docker in simple terms.`                                                         |
+| **2. Tokenization**            | Text → tokens → numbers                             | `["Explain"," Docker"," in"," simple"," terms","."]` → `[1245, 9821, 304, 762, 4501, 13]` |
+| **3. Transformer Processing**  | Tokens → vectors → attention layers analyze context | “simple” influences explanation style                                                     |
+| **4. Probability Calculation** | Model computes probability for next token           | P("Docker")=0.30, P("It")=0.42, P("A")=0.10                                               |
+| **5. Next Token Prediction**   | Highest/sampled probability selected                | `"Docker"`                                                                                |
+| **6. Generated Response**      | Repeats token-by-token until complete               | `Docker is a platform that...`                                                            |
+```
+
+### Prompt
+
+A prompt is the input (instruction, question, or text) that you give to an AI model to generate a response.
+
+> Simply: `Prompt` = `What you tell the AI`
+
+#### Prompt Types
+
+| Type                 | What It Means                  | Example                                                     |
+| -------------------- | ------------------------------ | ----------------------------------------------------------- |
+| **Instruction**      | Direct command                 | `Explain Docker.`                                           |
+| **Question**         | Asking something               | `What is Kubernetes?`                                       |
+| **Zero-Shot**        | Task without examples          | `Translate "Hello" to Spanish.`                             |
+| **One-Shot**         | One example given              | `"Hi" → "Hola"`<br>`"Thanks" →`                             |
+| **Few-Shot**         | Multiple examples given        | `"Bad" → Negative`<br>`"Great" → Positive`<br>`"Awesome" →` |
+| **Role-Based**       | Assign a role                  | `Act as a DevOps engineer.`                                 |
+| **Chain-of-Thought** | Ask for step-by-step reasoning | `Solve 25 × 12 step by step.`                               |
+
+## Machine Learning frameworks and model persistence tools
 
 1. `XGBoost (Extreme Gradient Boosting):` A high-performance gradient boosting library for supervised learning (especially tabular data).
 2. `LightGBM (Light Gradient Boosting Machine):` A gradient boosting framework by Microsoft - optimized for speed and low memory.
@@ -124,7 +153,7 @@ Generated Response
 7. `PyTorch/Torchvision:` Meta’s (Facebook’s) deep learning framework.
 8. `FastAI:` A high-level deep learning library built on top of PyTorch.
 
-##### How they fit together
+### How they fit together
 
 | `Library`               | `Type`         | `Built On`      | `Main Use`                           |
 | ----------------------- | -------------- | --------------- | ------------------------------------ |
@@ -133,7 +162,7 @@ Generated Response
 | `PyTorch / Torchvision` | Deep learning  | PyTorch core    | Research, flexible modeling          |
 | `FastAI`                | High-level API | PyTorch         | Quick prototyping, transfer learning |
 
-##### Data Preprocessing?
+### Data Preprocessing?
 
 Data preprocessing means cleaning, transforming, and organizing raw data so that it can be efficiently used by a machine learning model.
 
@@ -163,19 +192,19 @@ We fix these issues before training the model.
    - Testing set (e.g., 20%) → model is evaluated here
 7. Feature Selection (Optional)
 
-##### Machine Learning Concepts
+### Machine Learning Concepts
 
 1. `Introduction to AI, ML & DL:` ML vs DL, Applications, ML pipeline, Types of ML.
 2. `Data Preprocessing & Feature Engineering:` Missing data, scaling, encoding, feature selection, dimensionality reduction.
 3. `Model Evaluation Techniques:` Train/Test/Validation split, k-Fold CV, confusion matrix, accuracy, F1, ROC, AUC.
 
-##### Machine Learning Advance Topics
+### Machine Learning Advance Topics
 
 1. `Supervised Learning - Regression Models:` Linear Regression, Ridge, Lasso, Polynomial Regression.
 2. `Supervised Learning - Classification Models:` Logistic Regression, KNN, Decision Trees, Random Forest, SVM.
 3. `Introduction to Neural Networks:` Perceptron, Activation functions, Forward/Backward Propagation, Loss functions.
 
-##### Additional Topics
+### Additional Topics
 
 ![Machine Learning Workflow](/img/ml-topics.jpg)
 
@@ -186,7 +215,7 @@ We fix these issues before training the model.
 3. `Transformers (by Hugging Face):` A deep learning NLP library providing pretrained transformer models (BERT, GPT, RoBERTa, T5, etc.).
 4. `Sentence Transformers:` A library built on top of Hugging Face Transformers and PyTorch for generating semantic sentence embeddings.
 
-##### How they fit together
+### How they fit together
 
 | `Library`                     | `Type`              | `Key Strength`    | `Typical Use`                                      |
 | ----------------------------- | ------------------- | ----------------- | -------------------------------------------------- |
@@ -195,7 +224,7 @@ We fix these issues before training the model.
 | `Transformers (Hugging Face)` | Deep learning NLP   | Pretrained models | Summarization, question answering, text generation |
 | `Sentence Transformers`       | Embedding-based NLP | Semantic meaning  | Semantic search, similarity, clustering            |
 
-#### Neural Networks (NN)
+## Neural Networks (NN)
 
 To develop a solid understanding of `Neural Networks`, we should have a good grasp of the following key topics.
 
@@ -205,7 +234,7 @@ To develop a solid understanding of `Neural Networks`, we should have a good gra
 4. `Activation Functions:` ReLU, Sigmoid, Tanh.
 5. `Loss Functions:` MSE, Cross-Entropy.
 
-#### Modern Generative AI and Retrieval Augmented Generation (RAG) tools.
+## Modern Generative AI and Retrieval Augmented Generation (RAG) tools.
 
 These libraries power AI agents, retrieval systems, and diffusion models for text and images.
 
@@ -216,7 +245,7 @@ These libraries power AI agents, retrieval systems, and diffusion models for tex
 5. `FAISS (Facebook AI Similarity Search):` A vector database library for efficient similarity search.
 6. `ChromaDB:` A lightweight open-source vector database optimized for use with LangChain and LlamaIndex.
 
-##### How they fit together
+### How they fit together
 
 | `Library`    | `Type`                | `Main Purpose`                | `Typical Use`                             |
 | ------------ | --------------------- | ----------------------------- | ----------------------------------------- |
@@ -227,17 +256,17 @@ These libraries power AI agents, retrieval systems, and diffusion models for tex
 | `FAISS`      | Vector Store (C++)    | Fast embedding search         | Large-scale vector retrieval              |
 | `ChromaDB`   | Vector Store (Python) | Simple local/hosted retrieval | Lightweight RAG or semantic search setups |
 
-#### Deep Learning (DL)
+## Deep Learning (DL)
 
 Deep Learning is a specialized subfield of machine learning that focuses on algorithms inspired by the structure and function of the human brain, known as artificial neural networks. It involves training these multi-layered networks (called deep neural networks) to automatically learn hierarchical patterns and representations from large amounts of data. To develop a solid understanding of `deep learning`, we should have a good grasp of the following key topics.
 
-##### Deep Learning Topics
+### Deep Learning Topics
 
 ![Deep Learning Workflow](/img/dl-topics.jpg)
 
-#### Complete Guideline: Building an ML/AI Application (Start → Deployment)
+### Complete Guideline: Building an ML/AI Application (Start → Deployment)
 
-##### 1. Define the Problem Clearly > Understand what problem you’re solving.
+#### 1. Define the Problem Clearly > Understand what problem you’re solving.
 
 `Steps:`
 - Identify the business or real-world problem.
@@ -248,7 +277,7 @@ Deep Learning is a specialized subfield of machine learning that focuses on algo
 `Example:`
 Predict whether a customer will churn based on usage data.
 
-##### 2. Collect and Gather Data > Obtain high-quality, relevant data.
+#### 2. Collect and Gather Data > Obtain high-quality, relevant data.
 
 `Sources:`
 - Company databases (SQL, data warehouses)
@@ -260,7 +289,7 @@ Predict whether a customer will churn based on usage data.
 - Ensure data privacy (GDPR, HIPAA)
 - Gather enough data to train the model effectively
 
-##### 3. Data Cleaning and Preprocessing > Prepare raw data for analysis and modeling.
+#### 3. Data Cleaning and Preprocessing > Prepare raw data for analysis and modeling.
 
 `Steps:`
 - Handle missing values, outliers, and duplicates
@@ -273,7 +302,7 @@ Predict whether a customer will churn based on usage data.
 
 `Tools:` `pandas`, `NumPy`, `scikit-learn`
 
-##### 4. Exploratory Data Analysis (EDA) > Understand data structure and key relationships.
+#### 4. Exploratory Data Analysis (EDA) > Understand data structure and key relationships.
 
 `Steps:`
 - Visualize distributions, correlations, and trends
@@ -284,7 +313,7 @@ Predict whether a customer will churn based on usage data.
 
 `Outcome:` Insights that guide feature selection and model choice
 
-##### 5. Feature Engineering > Improve model performance with better features.
+#### 5. Feature Engineering > Improve model performance with better features.
 
 `Steps:`
 - Create new features from existing ones
@@ -293,7 +322,7 @@ Predict whether a customer will churn based on usage data.
 
 `Outcome:` A clean, optimized feature set
 
-##### 6. Model Selection and Training > Choose and train the most suitable ML algorithm.
+#### 6. Model Selection and Training > Choose and train the most suitable ML algorithm.
 
 `Steps:`
 - Identify the problem type:
@@ -305,7 +334,7 @@ Predict whether a customer will churn based on usage data.
 
 `Tools:` `scikit-learn`, `TensorFlow`, `PyTorch`, `XGBoost`, `LightGBM`
 
-##### 7. Model Evaluation > Test model performance on unseen data.
+#### 7. Model Evaluation > Test model performance on unseen data.
 
 `Common Metrics:`
 - `Classification:` Accuracy, Precision, Recall, F1, ROC-AUC
@@ -317,7 +346,7 @@ Predict whether a customer will churn based on usage data.
 - Check for overfitting/underfitting
 - Analyze errors and misclassifications
 
-##### 8. Model Optimization and Validation > Refine model performance and ensure robustness.
+#### 8. Model Optimization and Validation > Refine model performance and ensure robustness.
 
 `Steps:`
 - Fine-tune hyperparameters
@@ -325,7 +354,7 @@ Predict whether a customer will churn based on usage data.
 - Cross-validate results for consistency
 - Retrain with optimized settings
 
-##### 9. Model Packaging > Prepare your model for deployment.
+#### 9. Model Packaging > Prepare your model for deployment.
 
 `Steps:`
 - Save trained model (`.pkl`, `.joblib`, `.pt`, `.h5`)
@@ -335,7 +364,7 @@ Predict whether a customer will churn based on usage data.
 
 `Tools:` `Flask`, `FastAPI`, `Docker`, `Pickle`, `MLflow`
 
-##### 10. Deployment > Make your model available for real users or systems.
+#### 10. Deployment > Make your model available for real users or systems.
 
 `Deployment Options:`
 - `Web App:` Flask/FastAPI + Streamlit/Gradio for UI
@@ -348,7 +377,7 @@ Predict whether a customer will churn based on usage data.
 - Automate with CI/CD pipelines
 - Secure endpoints (authentication, HTTPS)
 
-##### 11. Monitoring and Maintenance > Ensure model performance remains stable post-deployment.
+#### 11. Monitoring and Maintenance > Ensure model performance remains stable post-deployment.
 
 `Steps:`
 - Monitor prediction accuracy and latency
@@ -358,7 +387,7 @@ Predict whether a customer will churn based on usage data.
 
 `Tools:` `MLflow`, `Prometheus`, `Grafana`, `Evidently AI`
 
-##### 12. Continuous Improvement > Keep enhancing the ML system over time.
+#### 12. Continuous Improvement > Keep enhancing the ML system over time.
 
 `Steps:`
 - Gather feedback from users
@@ -366,7 +395,7 @@ Predict whether a customer will churn based on usage data.
 - Improve features or try advanced models
 - Document every step for reproducibility
 
-##### Summary Workflow
+#### Summary Workflow
 
 | Step | Description            | Tools                     |
 | ---- | ---------------------- | ------------------------- |
@@ -383,11 +412,11 @@ Predict whether a customer will churn based on usage data.
 | 11   | Monitoring             | MLflow, Evidently         |
 | 12   | Continuous Improvement | CI/CD, retraining         |
 
-##### Simple Flow:
+#### Simple Flow:
 
 `Problem → Data → Preparation → Modeling → Evaluation → Deployment → Monitoring → Improvement`
 
-#### Tools & Frameworks
+### Tools & Frameworks
 
 Build, train, and deploy ML/DL models efficiently.
 
@@ -537,5 +566,3 @@ Dive deeper into specialized AI domains.
 [facebook-url-jakir]: https://www.facebook.com/jakir.ruet/
 [youtube-shield-jakir]: https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white
 [youtube-url-jakir]: https://www.youtube.com/@mjakaria-ruet/featured
-
-
