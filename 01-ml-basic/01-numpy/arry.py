@@ -1,0 +1,16 @@
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+print(type(arr))
+print(arr.shape)
+print(arr.dtype)
+print(arr[0])
+print(arr[1:4])
+print(arr + 10)
+print(arr * 2)
+print(arr.mean())
+print(arr.sum())
+print(arr.max())
+print(arr.min())
+print(arr.reshape(5, 1))

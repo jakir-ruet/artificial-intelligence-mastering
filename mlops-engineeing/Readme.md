@@ -41,7 +41,7 @@ An MLOps Engineer is responsible for making ML models production-ready, scalable
 
 ### MLOps Lifecycle (End-to-End)
 
-![MLOps Lifecycle](/img/mlops-lifecycle.png)
+![MLOps Lifecycle](/mlops-engineeing/img/mlops-lifecycle.png)
 
 | #   | Stage             | Description                                  | Key Activities                                    | Tools/Technologies                    |
 | --- | ----------------- | -------------------------------------------- | ------------------------------------------------- | ------------------------------------- |
@@ -78,7 +78,7 @@ An MLOps Engineer is responsible for making ML models production-ready, scalable
 
 ### MLOps Architecture
 
-![MLOps Architecture](/img/mlops-architecture.png)
+![MLOps Architecture](/mlops-engineeing/img/mlops-architecture.png)
 
 MLOps architecture encompasses the `infrastructure`, `automation`, and `governance` layers that make that lifecycle repeatable and scalable. Think of MLOps as the `bridge` between `Data Science` (building models) and `DevOps` (shipping software). Here is the comprehensive breakdown of a full MLOps architecture.
 
