@@ -146,7 +146,7 @@ The CDF value ($\Phi$) represents the probability that a random variable from th
 #### 💡 Technical Note
 
 These values are calculated using the **Standard Normal Cumulative Distribution Function**:
-$$ P(X \le x) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-\frac{t^2}{2}} dt $$
+$P(X \le x) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-\frac{t^2}{2}} dt$
 
 ## With Regards, `Jakir`
 
