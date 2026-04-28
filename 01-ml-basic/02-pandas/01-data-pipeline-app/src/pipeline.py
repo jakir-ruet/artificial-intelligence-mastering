@@ -11,11 +11,14 @@ class DataPipeline:
 		self.transformer = DataTransformer()
 
 	def run(self, path):
-		df = pd.read_csv("data/raw.csv")
+		df = pd.read_csv("data/raw_data.csv")
 
 		validate(df)
 
-		df = self.cleaner.run(df)
-		df = self.transformer.run(df)
+		# create clean copy
+		clean_df = self.cleaner.run(df.copy())
 
-		return df
+		# create ml_ready copy
+		transformed_df = self.transformer.run(clean_df.copy())
+
+		return clean_df, transformed_df
