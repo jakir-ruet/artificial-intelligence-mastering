@@ -48,4 +48,4 @@ id,name,age,department,salary,date
 python main.py
 ```
 
-> Should be create file `data/cleaned_transformed.csv`
+> Should be create file `data/clean_data.csv` and `ml_ready_data.csv`.
