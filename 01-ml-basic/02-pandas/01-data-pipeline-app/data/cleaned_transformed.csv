@@ -1,0 +1,6 @@
+id,name,age,salary,date,age_group,year,month,department_Finance,department_HR,department_IT
+1,John,-1.1023565092191001,0.15075567228888181,2024-01-01,Young,2024,1,False,False,True
+2,Alice,-0.18372608486984948,-1.3568010505999364,2024-01-02,Adult,2024,1,False,True,False
+3,Bob,0.5052467333920885,0.15075567228888181,2024-01-03,Adult,2024,1,False,False,True
+4,Eve,-0.8726989031317874,1.6583123951777,2024-01-04,Young,2024,1,True,False,False
+5,Tom,1.653534763828652,-0.6030226891555273,2024-01-04,Adult,2024,1,False,True,False

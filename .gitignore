@@ -4,4 +4,5 @@
 /venv
 /.venv
 /__pycache__/
+/01-ml-basic/02-pandas/01-data-pipeline-app/src/__pycache__
 /01-ml-basic/02-pandas/project/src/__pycache__
