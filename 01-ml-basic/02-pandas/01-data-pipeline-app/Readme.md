@@ -15,14 +15,14 @@ touch src/cleaner.py
 touch src/transformer.py
 touch src/pipeline.py
 mkdir data
-touch data/raw.csv
+touch data/raw_data.csv
 ```
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Putting raw data in `data/raw.csv`
+### Putting raw data in `data/raw_data.csv`
 
 ```bash
 id,name,age,department,salary,date
