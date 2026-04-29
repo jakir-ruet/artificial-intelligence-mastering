@@ -57,14 +57,17 @@ In Simple terms
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | You give the computer `rules` + `data` → it produces an `answer`. | You give the computer `data` + `answers` → it learns the `rules`. |
 
-### How Machine Learning Works (at a high level)
+### How Machine Learning Works (High-Level)
 
-1. Collect Data > (e.g., customer info, images, text)
-2. Prepare Data > Clean, normalize, and split into training/testing sets.
-3. Choose a Model > (e.g., linear regression, decision tree, neural network)
-4. Train the Model > Feed it data so it learns patterns.
-5. Test the Model > Evaluate accuracy on new (unseen) data.
-6. Use the Model > Make predictions or decisions automatically.
+| Step | Stage                                        | What Happens                                                                         | Simple Meaning                            |
+| ---- | -------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------- |
+| 1    | Data Collection                              | Gather raw data (images, text, numbers, logs, etc.)                                  | Get information to learn from             |
+| 2    | Data Preparation (Preprocessing)             | Clean data, handle missing values, normalize, encode, and split into train/test sets | Make data ready for the model             |
+| 3    | Feature Engineering (optional but important) | Create or select meaningful features from raw data                                   | Improve quality of input data             |
+| 4    | Model Selection                              | Choose an algorithm (e.g., Linear Regression, Decision Tree, Neural Network)         | Decide how the system will learn          |
+| 5    | Model Training                               | Feed training data into the model so it learns patterns                              | Model learns from examples                |
+| 6    | Model Evaluation                             | Test model on unseen data using metrics (accuracy, F1, RMSE, etc.)                   | Check how well it performs                |
+| 7    | Model Deployment / Usage                     | Use the trained model in real applications for predictions                           | Make real-world predictions automatically |
 
 ### Main Types of Machine Learning
 
@@ -91,18 +94,20 @@ GPT models, LLaMA, Claude, Mistral, Gemini etc.
 > - `Language` → works with human text (English, Bangla, etc.)
 > - `Model` → a mathematical neural network that learns patterns
 
-### LLM Workflow (Real System)
+### How an LLM (e.g., GPT) Generates a Response
 
-| Step                           | What Happens                                        | Example                                                                       |
-| ------------------------------ | --------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **1. User Prompt**             | You enter text                                      | `Explain Docker in simple terms.`                                             |
-| **2. Tokenization**            | Text → tokens → numbers                             | `[Explain, Docker, in, simple, terms,.]` → `[1245, 9821, 304, 762, 4501, 13]` |
-| **3. Transformer Processing**  | Tokens → vectors → attention layers analyze context | `simple` influences explanation style                                         |
-| **4. Probability Calculation** | Model computes probability for next token           | `P(Docker)=0.30`, `P(It)=0.42`, `P(A)=0.10`                                   |
-| **5. Next Token Prediction**   | Highest/sampled probability selected                | `Docker`                                                                      |
-| **6. Generated Response**      | Repeats token-by-token until complete               | `Docker is a platform that...`                                                |
+| Step                                               | What Happens                                                                                   | Example                                                                       |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **1. User Prompt**                                 | User sends input text                                                                          | `"Explain Docker in simple terms."`                                           |
+| **2. Tokenization**                                | Text is split into tokens and converted into numbers (IDs)                                     | `"Explain Docker"` → `[1245, 9821, 304]`                                      |
+| **3. Embedding + Transformer Processing**          | Tokens are converted into vectors and processed through attention layers to understand context | Model understands that *“Docker” = technology*, *“simple” = easy explanation* |
+| **4. Context Understanding (Attention Mechanism)** | Model focuses on important words and relationships                                             | “simple” affects explanation style                                            |
+| **5. Probability Prediction**                      | Model calculates probability of next possible token                                            | `P("is") = 0.35`, `P("Docker") = 0.20`, `P("a") = 0.25`                       |
+| **6. Next Token Selection**                        | One token is selected (highest probability or sampling)                                        | `"Docker"`                                                                    |
+| **7. Iterative Generation**                        | Steps 4–6 repeat to build full sentence                                                        | `"Docker is a platform that..."`                                              |
+| **8. Final Response Output**                       | Complete response is returned to user                                                          | Full explanation appears                                                      |
 
-> `User Prompt → Tokenization → Transformer Processing → Probability Calculation → Next Token Prediction → Generated Response`
+> - `User Prompt → Tokenization → Embedding → Transformer (Attention) → Probability Prediction → Token Generation → Full Response`
 
 ### Prompt
 
