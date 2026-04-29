@@ -1,0 +1,9 @@
+age,income,loan_amount,credit_score,employment_years,debt_ratio,marital_status,target
+25,3000,10000,650,2,0.4,single,1
+45,8000,20000,800,10,0.2,married,0
+35,5000,15000,720,5,0.3,married,0
+50,10000,30000,780,15,0.15,married,0
+23,2500,5000,600,1,0.5,single,1
+40,7000,25000,750,8,0.25,married,0
+60,12000,40000,820,20,0.1,married,0
+30,4000,12000,680,3,0.35,single,1

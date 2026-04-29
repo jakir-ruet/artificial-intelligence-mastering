@@ -6,3 +6,5 @@
 /__pycache__/
 /01-ml-basic/02-pandas/01-data-pipeline-app/src/__pycache__
 /01-ml-basic/02-pandas/project/src/__pycache__
+/01-ml-basic/05-scikit-learn/01-classification-models/01-credit-risk-app/src/__pycache__
+/01-ml-basic/05-scikit-learn/02-regression-models/01-regression-app/src/__pycache__

@@ -75,3 +75,23 @@ Machine Learning
 > - Clustering → Group data
 > - Dimensionality Reduction → Compress data
 > - Reinforcement Learning → Learn by reward
+
+### Classification vs Regression vs Clustering
+
+| Category       | Metric                    | Full Form                                            | Meaning                                                         | When to Use                      |
+| -------------- | ------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | -------------------------------- |
+| Classification | Accuracy                  | Accuracy Score                                       | Percentage of correct predictions                               | When dataset is balanced         |
+| Classification | Precision                 | Precision Score                                      | Correct positive predictions out of predicted positives         | When false positives are costly  |
+| Classification | Recall                    | Recall (Sensitivity)                                 | Correct positives out of actual positives                       | When missing positives is costly |
+| Classification | F1 Score                  | F1 Score                                             | Harmonic mean of Precision and Recall                           | Imbalanced datasets              |
+| Classification | ROC-AUC                   | Receiver Operating Characteristic - Area Under Curve | Measures ability to distinguish between classes                 | Binary classification            |
+| Classification | Log Loss                  | Logarithmic Loss                                     | Penalizes confident wrong predictions                           | Probabilistic models             |
+| Regression     | MAE                       | Mean Absolute Error                                  | Average absolute difference between actual and predicted values | Simple error measurement         |
+| Regression     | MSE                       | Mean Squared Error                                   | Average of squared errors (penalizes large errors more)         | When large errors are critical   |
+| Regression     | RMSE                      | Root Mean Squared Error                              | Square root of MSE (same unit as target)                        | Most commonly used metric        |
+| Regression     | R² Score                  | R-squared (Coefficient of Determination)             | Measures how well model explains variance                       | Model goodness of fit            |
+| Clustering     | Silhouette Score          | —                                                    | Measures how well a point fits its cluster vs others            | General clustering quality       |
+| Clustering     | Davies-Bouldin Index      | —                                                    | Measures cluster similarity (lower is better)                   | Model comparison                 |
+| Clustering     | Calinski-Harabasz Index   | —                                                    | Ratio of between-cluster vs within-cluster variance             | Cluster separation quality       |
+| Clustering     | Inertia                   | —                                                    | Sum of squared distances to cluster centers                     | K-Means optimization             |
+| Clustering     | Adjusted Rand Index (ARI) | Adjusted Rand Index                                  | Measures similarity with true labels                            | When ground truth exists         |
