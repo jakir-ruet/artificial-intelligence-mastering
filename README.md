@@ -108,7 +108,7 @@ Machine Learning is a branch of artificial intelligence (AI) that enables comput
 | 6    | Model Evaluation                             | Test model on unseen data using metrics (accuracy, F1, RMSE, etc.)                   | Check how well it performs                |
 | 7    | Model Deployment / Usage                     | Use the trained model in real applications for predictions                           | Make real-world predictions automatically |
 
-### Main Types of Machine Learning
+### Main Types of Machine Learning & Models
 
 | Type                       | What it does                                    | Example                               | Student Analogy                     | Why                                                  |
 | -------------------------- | ----------------------------------------------- | ------------------------------------- | ----------------------------------- | ---------------------------------------------------- |
@@ -116,11 +116,54 @@ Machine Learning is a branch of artificial intelligence (AI) that enables comput
 | **Unsupervised Learning**  | Finds hidden patterns in unlabeled data         | Customer segmentation, topic grouping | Student has no answer sheet         | Must discover patterns on their own                  |
 | **Reinforcement Learning** | Learns by reward and punishment (trial & error) | Game AI, robots, self-driving cars    | Student learns from marks/rewards   | Improves actions based on feedback                   |
 
-> Simple memory trick
+> **Simple memory trick**
 >
 > - `Supervised` → Teacher shows answers
 > - `Unsupervised` → Student discovers patterns
 > - `Reinforcement` → Learn by reward & punishment
+>
+```bash
+Machine Learning
+│
+├── Supervised Learning
+│     ├── Classification Models
+│     │     ├── Binary (Spam detection)
+│     │     ├── Multi-class (Animal classification)
+│     │     └── Multi-label (Image tagging)
+│     │
+│     └── Regression Models
+│           ├── Linear (House price)
+│           ├── Polynomial (Growth curve)
+│           └── Regularized (Salary prediction)
+│
+├── Unsupervised Learning
+│     ├── Clustering Models
+│     │     ├── K-Means (Customer groups)
+│     │     ├── DBSCAN (Fraud detection)
+│     │     └── Hierarchical (Document grouping)
+│     │
+│     └── Dimensionality Reduction
+│           ├── PCA (Feature reduction)
+│           ├── t-SNE (Visualization)
+│           └── SVD (Text processing)
+│
+├── Semi-Supervised Learning
+│     ├── Label Propagation (Image labeling)
+│     └── Self-training (Text classification)
+│
+└── Reinforcement Learning
+      ├── Value-based (Q-learning)
+      ├── Policy-based (Robot control)
+      └── Model-based (Self-driving cars)
+```
+
+> **Master Summary**
+>
+> - Classification → Predict categories
+> - Regression → Predict numbers
+> - Clustering → Group data
+> - Dimensionality Reduction → Compress data
+> - Reinforcement Learning → Learn by reward
 
 ## Large Language Model - `LLM`
 
