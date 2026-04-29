@@ -39,19 +39,58 @@ Be comfortable writing and debugging Python code for data and ML.
 7. Python String Formatting, Python User Input, Python VirtualEnv.
 8. Python File Handling, Python Read Files, Python Write/Create Files Python Delete Files.
 
-### Python Library (Programming for ML and DL)
+### Python Libraries for Machine Learning & Deep Learning
 
-1. `Matplotlib:` (creating static, animated, and interactive plots).
-2. `Seaborn:` (high-level visualization library)
-3. `SciPy:` (scientific computing library built on NumPy)
-4. `Pandas:` (Data Frames Handles labeled data)
-5. `NumPy:` Handles numerical data (arrays, matrices).
+#### Core Data & Scientific Computing Libraries
+
+| Library | Type                 | Purpose                                   | Simple Meaning              |
+| ------- | -------------------- | ----------------------------------------- | --------------------------- |
+| NumPy   | Numerical Computing  | Handles arrays, matrices, math operations | Fast mathematical computing |
+| Pandas  | Data Manipulation    | Works with structured data (DataFrames)   | Excel-like data handling    |
+| SciPy   | Scientific Computing | Advanced math, statistics, optimization   | Scientific calculations     |
+
+#### Data Visualization Libraries
+
+| Library    | Type                      | Purpose                      | Simple Meaning         |
+| ---------- | ------------------------- | ---------------------------- | ---------------------- |
+| Matplotlib | Visualization             | Create plots, graphs, charts | Basic plotting library |
+| Seaborn    | Statistical Visualization | High-level attractive plots  | Better-looking charts  |
+
+#### Machine Learning Core Libraries
+
+| Library      | Type               | Purpose                                | Simple Meaning         |
+| ------------ | ------------------ | -------------------------------------- | ---------------------- |
+| Scikit-learn | ML Framework       | Classification, regression, clustering | Core ML toolkit        |
+| XGBoost      | Boosting Algorithm | High-performance gradient boosting     | Powerful ML model      |
+| Optuna       | Optimization       | Hyperparameter tuning                  | Auto model improvement |
+
+#### Deep Learning Libraries
+
+| Library            | Type          | Purpose                  | Simple Meaning       |
+| ------------------ | ------------- | ------------------------ | -------------------- |
+| TensorFlow / Keras | Deep Learning | Build neural networks    | AI brain builder     |
+| PyTorch            | Deep Learning | Flexible neural networks | Research-friendly DL |
+
+#### MLOps & Deployment Tools
+
+| Library | Type                | Purpose                    | Simple Meaning        |
+| ------- | ------------------- | -------------------------- | --------------------- |
+| FastAPI | API Framework       | Serve ML models as APIs    | Model deployment      |
+| MLflow  | Experiment Tracking | Track models & experiments | Model version control |
+| DVC     | Data Versioning     | Track datasets/models      | Git for ML data       |
+
+#### Optimization, Testing & Utilities
+
+| Library | Type                  | Purpose                              | Simple Meaning    |
+| ------- | --------------------- | ------------------------------------ | ----------------- |
+| Optuna  | Hyperparameter Tuning | Automatically improve model settings | Smart tuning      |
+| PyYAML  | Configuration         | Handle YAML files                    | Config management |
+| PyTest  | Testing               | Unit testing ML code                 | Code validation   |
+| Joblib  | Serialization         | Save/load ML models                  | Model storage     |
 
 ### Machine Learning (ML)
 
-Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience.
-
-In Simple terms
+Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience. In Simple terms
 
 | Traditional programming                                           | Machine Learning                                                  |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
