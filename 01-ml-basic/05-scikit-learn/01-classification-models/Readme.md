@@ -48,15 +48,6 @@ Classification is a supervised learning technique where the model predicts a cat
 | Margin-based   | Support Vector Machine (SVM) | Finds the best boundary (hyperplane) that separates classes                     | Face detection, text classification          |
 | Probabilistic  | Naive Bayes                  | Uses probability based on feature independence assumption                       | Spam filtering, sentiment analysis           |
 
-#### Important Evaluation Metrics
-
-| Metric    | Meaning                                   |
-| --------- | ----------------------------------------- |
-| Accuracy  | Overall correctness                       |
-| Precision | How many predicted spam are actually spam |
-| Recall    | How many actual spam were detected        |
-| F1-score  | Balance of precision + recall             |
-
 #### When to Use Which Model
 
 | Model               | Best For                      |
