@@ -153,8 +153,8 @@ Machine Learning is NOT just algorithms. It is a complete engineering system:
 |  13   | Monitoring               | Track performance          | Maintain model       | Logs → Metrics           | MLflow, Grafana                 | Detect performance drop         |
 |  14   | Continuous Improvement   | Retrain model              | Keep improving       | New data → Updated model | CI/CD pipelines                 | Better dog detection            |
 
-> Machine Learning ecosystem = `Data (Pandas) → Model (Sklearn/XGBoost/PyTorch) → Optimize (Optuna) → Save (Joblib/Pickle) → Deploy (Flask/Docker)`
-> EDA = Exploratory Data Analysis
+> - Machine Learning ecosystem = `Data (Pandas) → Model (Sklearn/XGBoost/PyTorch) → Optimize (Optuna) → Save (Joblib/Pickle) → Deploy (Flask/Docker)`
+> - EDA = Exploratory Data Analysis
 
 ### Preprocessing & Feature Engineering Stack
 
