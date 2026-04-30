@@ -165,6 +165,13 @@ Machine Learning
 > - Dimensionality Reduction → Compress data
 > - Reinforcement Learning → Learn by reward
 
+**Remove some generated file & directory**
+
+```bash
+find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \)
+find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm -r {} +
+```
+
 ## Large Language Model - `LLM`
 
 An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families:
