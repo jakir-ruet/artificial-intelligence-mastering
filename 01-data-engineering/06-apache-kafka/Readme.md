@@ -2,6 +2,8 @@
 
 Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
+#### Apache Kafka  vs RabbitMQ / ActiveMQ (Traditional MQ)
+
 Comparing Apache Kafka with traditional messaging systems (like RabbitMQ or ActiveMQ) is less about “which is better” and more about architecture philosophy. They solve different problems, even though both move messages.
 
 | Aspect                 | Apache Kafka                                               | RabbitMQ / ActiveMQ (Traditional MQ)                  |
@@ -25,6 +27,76 @@ Comparing Apache Kafka with traditional messaging systems (like RabbitMQ or Acti
 | **Complexity**         | Higher (needs proper design)                               | Lower (quick to start)                                |
 | **Ecosystem**          | Kafka Streams, Connect, Schema Registry                    | Plugins, exchanges, routing                           |
 | **Best For**           | Large-scale, distributed data pipelines                    | Simple messaging and task distribution                |
+
+### Install and Configuration
+
+```bash
+sudo apt install default-jdk
+sudo apt install default-jre
+java -version
+```
+
+```bash
+cd /opt
+wget https://dlcdn.apache.org/kafka/4.2.0/kafka_2.13-4.2.0.tgz
+tar -xvf kafka_2.13-4.2.0.tgz
+cd kafka_2.13-4.2.0
+```
+
+```bash
+sudo vi config/kraft/server.properties
+```
+
+```bash
+process.roles=broker,controller
+node.id=1
+
+controller.quorum.voters=1@localhost:9093
+
+listeners=PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+advertised.listeners=PLAINTEXT://YOUR_SERVER_IP:9092
+
+controller.listener.names=CONTROLLER
+log.dirs=/tmp/kraft-logs
+```
+
+```bash
+cd /opt/kafka_2.13-4.2.0/bin/
+./kafka-storage.sh random-uuid
+```
+
+> Should see: piXQZUpUTWW-i56kwq0G1g
+
+```bash
+cd /opt/kafka_2.13-4.2.0/bin/
+./kafka-storage.sh format \
+--standalone \
+-t piXQZUpUTWW-i56kwq0G1g \
+-c ../config/server.properties
+```
+
+Or
+
+```bash
+cd /opt/kafka_2.13-4.2.0/bin/
+./kafka-storage.sh format \
+-t piXQZUpUTWW-i56kwq0G1g \
+-c ../config/server.properties
+```
+
+```bash
+cd /opt/kafka_2.13-4.2.0/bin/
+./kafka-metadata-quorum.sh \
+--bootstrap-controller localhost:9093 \
+describe --status
+```
+
+```bash
+cd /opt/kafka_2.13-4.2.0/bin/
+./kafka-metadata-quorum.sh \
+--bootstrap-controller localhost:9093 \
+describe --replication
+```
 
 ### Kafka Components
 
