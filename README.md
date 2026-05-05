@@ -233,18 +233,18 @@ Below is a complete MLOps / Machine Learning engineering lifecycle guide. It foc
 
 ![MLOps Lifecycle](/img/mlops-lifecycle.png)
 
-| #   | Phase                         | What happens                                         | Key Tools                                         | Example in real system                                 |
-| --- | ----------------------------- | ---------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |
-| 1   | Data Gathering & Processing   | Collect raw data from sources and clean it           | Apache Kafka, Airflow, Spark, Pandas, S3, APIs    | Collect user logs → store in S3 → clean missing values |
-| 2   | Data Analysis (EDA)           | Understand data quality, patterns, anomalies         | Pandas, Matplotlib, Seaborn, ydata-profiling      | Check missing values, distributions, outliers          |
-| 3   | Data Preparation              | Feature engineering + transformation                 | Scikit-learn pipelines, Featuretools, Spark ML    | Normalize salary, encode categories, build features    |
-| 4   | Model Training & Development  | Train ML models + experiment tracking                | Scikit-learn, TensorFlow, PyTorch, MLflow         | Train RandomForest / XGBoost, log experiments          |
-| 5   | Model Evaluation & Validation | Measure performance and compare models               | MLflow, Scikit-learn metrics, Optuna              | Compare RMSE of multiple models, cross-validation      |
-| 6   | Model Serving                 | Deploy model for real-time or batch inference        | FastAPI, Flask, MLflow Models, Docker, Kubernetes | REST API: `/predict` returns model prediction          |
-| 7   | Model Health Monitoring       | Monitor drift, performance, system health            | Prometheus, Grafana, Evidently AI, Datadog        | Detect accuracy drop or data drift over time           |
-| 8   | Model Re-training & Iteration | Retrain model when data changes or performance drops | Airflow, Kubeflow, CronJobs, MLflow               | Weekly retraining pipeline triggered automatically     |
-| 9   | Orchestration                 | Automate full ML pipeline execution                  | Apache Airflow, Prefect, Kubeflow Pipelines       | DAG: ingest → train → evaluate → deploy                |
-| 10  | Governance                    | Ensure traceability, compliance, version control     | MLflow Registry, DVC, Git, IAM, Audit logs        | Track model versions, approve staging → production     |
+| #   | Phase                          | What happens                                         | Key Tools                                         | Example in real system                                 |
+| --- | ------------------------------ | ---------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |
+| 1   | Data Gathering & Processing    | Collect raw data from sources and clean it           | Apache Kafka, Airflow, Spark, Pandas, S3, APIs    | Collect user logs → store in S3 → clean missing values |
+| 2   | Data Analysis (EDA)            | Understand data quality, patterns, anomalies         | Pandas, Matplotlib, Seaborn, ydata-profiling      | Check missing values, distributions, outliers          |
+| 3   | Data Preparation               | Feature engineering + transformation                 | Scikit-learn pipelines, Featuretools, Spark ML    | Normalize salary, encode categories, build features    |
+| 4   | Model Training & Development   | Train ML models + experiment tracking                | Scikit-learn, TensorFlow, PyTorch, MLflow         | Train RandomForest / XGBoost, log experiments          |
+| 5   | Model Evaluation & Validation  | Measure performance and compare models               | MLflow, Scikit-learn metrics, Optuna              | Compare RMSE of multiple models, cross-validation      |
+| 6   | Model Serving                  | Deploy model for real-time or batch inference        | FastAPI, Flask, MLflow Models, Docker, Kubernetes | REST API: `/predict` returns model prediction          |
+| 7   | Model Health Monitoring        | Monitor drift, performance, system health            | Prometheus, Grafana, Evidently AI, Datadog        | Detect accuracy drop or data drift over time           |
+| 8   | Model Re-training & Iteration  | Retrain model when data changes or performance drops | Airflow, Kubeflow, CronJobs, MLflow               | Weekly retraining pipeline triggered automatically     |
+| 9   | Containerization Orchestration | Automate full ML pipeline execution                  | Apache Airflow, Prefect, Kubeflow Pipelines       | DAG: ingest → train → evaluate → deploy                |
+| 10  | Governance Monitoring          | Ensure traceability, compliance, version control     | MLflow Registry, DVC, Git, IAM, Audit logs        | Track model versions, approve staging → production     |
 
 > ML in production = data + code + infrastructure + automation + governance
 
