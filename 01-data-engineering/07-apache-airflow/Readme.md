@@ -2,40 +2,6 @@
 
 It's an open-source workflow orchestration platform for programmatically authoring, scheduling, and monitoring data pipelines. Let think an analogy, Airflow is like a `film director` — doesn't act, sing, or do cinematography, but tells everyone what to do, when, and in what order.
 
-#### Apache Airflow Components
-
-| Component              | Description                                            | Example                                                    |
-| ---------------------- | ------------------------------------------------------ | ---------------------------------------------------------- |
-| **Scheduler**          | Triggers workflows based on schedule/dependencies      | `airflow scheduler` process; checks @daily DAG at midnight |
-| **Executor**           | Defines how tasks run (local, distributed, Kubernetes) | `CeleryExecutor` distributes 100 tasks across 10 workers   |
-| **Web Server**         | UI dashboard for monitoring & management               | `http://localhost:8080` → view DAGs, logs, failures        |
-| **Metadata DB**        | Stores all state (DAGs, tasks, variables, history)     | PostgreSQL `task_instance` table with `state='success'`    |
-| **Worker**             | Executes individual task code                          | Worker #3 runs `transform_data` task, reports back         |
-| **DAG Directory**      | Folder where Airflow watches for Python DAG files      | `/airflow/dags/` containing `sales_etl.py`                 |
-| **Message Queue**      | Buffer between scheduler & workers (CeleryExecutor)    | Redis holds queue: `[extract_api, transform, load]`        |
-| **Task Instance**      | Single run of a task in a specific DAG run             | `extract_sql` task took 12s, state `success`               |
-| **DAG Run**            | One full execution of a DAG for a time interval        | Jan 2 run processes data from Jan 1 interval               |
-| **Operator**           | Template defining what a task does                     | `BashOperator(cmd='echo Hello')`                           |
-| **Sensor**             | Waits for a condition before completing                | `FileSensor(filepath='/data.csv', wait=30s)`               |
-| **Hook**               | Interface to external systems (DBs, cloud, APIs)       | `PostgresHook.run('SELECT * FROM users')`                  |
-| **Connection**         | Stored credentials for external services               | `aws_prod`: S3, access key, secret, region                 |
-| **Variable**           | Key-value config store accessible from DAGs            | `Variable.get('slack_url')` returns webhook                |
-| **XCom**               | Small data exchange between tasks (max 1MB)            | Task A pushes `row_count=1000`, Task B pulls it            |
-| **Pool**               | Limits concurrent tasks across DAGs                    | `db_writes` pool: max 3 simultaneous DB writes             |
-| **Trigger Rule**       | Defines when task runs based on upstream states        | `all_done` runs even if upstream failed (cleanup)          |
-| **SLA**                | Max expected task time; alerts if exceeded             | `sla=2hr` → email if task takes 3 hours                    |
-| **Callback**           | Function triggered on task success/failure             | Send Slack alert when task fails                           |
-| **Plugins**            | Custom operators, hooks, or UI extensions              | Custom `SalesforceOperator` from plugin folder             |
-| **KubernetesExecutor** | Each task runs in its own ephemeral pod                | 10 tasks = 10 pods, each pod runs one task                 |
-
-> Priority Legend
-
-| Priority  | Components                                        |
-| --------- | ------------------------------------------------- |
-| Must know | DAG, Task, Operator, Scheduler, Executor          |
-| Important | Web Server, Metadata DB, Sensor, Hook, Connection |
-| Advanced  | XCom, Pool, Trigger Rule, SLA, Callback, Plugins  |
-
 ### Apache Airflow Architecture
 
 ![Apache Airflow Architecture](/img/airflow-architecture.png)
@@ -92,3 +58,11 @@ It's an open-source workflow orchestration platform for programmatically authori
 | PostgreSQL | Relational database                | `PostgresOperator(sql="UPDATE users SET active=True")`                   |
 | Tableau    | BI visualization                   | `TableauRefreshWorkbookOperator(workbook_id='123')`                      |
 | S3         | Object storage                     | `S3Hook.load_file(filename='data.csv', bucket='my-bucket')`              |
+
+> Priority Legend
+
+| Priority  | Components                                        |
+| --------- | ------------------------------------------------- |
+| Must know | DAG, Task, Operator, Scheduler, Executor          |
+| Important | Web Server, Metadata DB, Sensor, Hook, Connection |
+| Advanced  | XCom, Pool, Trigger Rule, SLA, Callback, Plugins  |
