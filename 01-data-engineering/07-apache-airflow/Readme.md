@@ -66,3 +66,106 @@ It's an open-source workflow orchestration platform for programmatically authori
 | Must know | DAG, Task, Operator, Scheduler, Executor          |
 | Important | Web Server, Metadata DB, Sensor, Hook, Connection |
 | Advanced  | XCom, Pool, Trigger Rule, SLA, Callback, Plugins  |
+
+### Airflow Install & Configuration
+
+#### System Update & Upgrade
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+#### Required Dependancy Install
+
+```bash
+sudo apt install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    python3-pip \
+    python3-venv \
+    curl \
+    git
+```
+
+#### Create User and Password
+
+```bash
+sudo useradd -m -s /bin/bash airflow
+sudo passwd airflow
+```
+
+```bash
+sudo su - airflow
+```
+
+#### Environment Setup and Update
+
+```bash
+python3 -m venv airflow-venv
+source airflow-venv/bin/activate
+```
+
+```bash
+pip install --upgrade pip setuptools wheel
+```
+
+#### Set Airflow version
+
+```bash
+export AIRFLOW_VERSION=3.2.0
+export PYTHON_VERSION=3.14
+export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+```
+
+#### Install Apache Airflow
+
+```bash
+pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+pip install apache-airflow==3.2.0
+```
+
+#### Initialize Airflow database
+
+```bash
+export AIRFLOW_HOME=~/airflow
+airflow db migrate
+```
+
+#### Create admin user
+
+```bash
+airflow standalone # Recommended
+```
+
+**Or**
+
+```bash
+airflow users create \
+    --username admin \
+    --firstname Admin \
+    --lastname User \
+    --role Admin \
+    --email admin@example.com \
+    --password admin
+```
+
+#### Start Airflow services - `Terminal 1`
+
+```bash
+airflow webserver --port 8085
+```
+
+#### Start Airflow services - Terminal 2 (Scheduler)
+
+```bash
+su - airflow
+python3 -m venv airflow-venv
+source airflow-venv/bin/activate
+airflow scheduler
+```
+
+```bash
+http://<your-server-ip>:8080 # Username: admin, Password: collect from cli log
+```
