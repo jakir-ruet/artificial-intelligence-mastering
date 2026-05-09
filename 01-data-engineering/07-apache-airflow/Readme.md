@@ -13,7 +13,7 @@ It's an open-source workflow orchestration platform for programmatically authori
 | Component   | Short Description                                                      | Example                                                                                            |
 | ----------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | DAGs Folder | Directory containing Python files that define workflows                | `/opt/airflow/dags/` with `sales_etl.py`, `ml_pipeline.py`                                         |
-| Webserver   | Web UI to monitor, trigger, and debug workflows                        | Visit `http://localhost:8080` → see DAG `daily_sales` failed → click to view logs                  |
+| Webserver   | Web UI to monitor, trigger, and debug workflows                        | Visit `http://localhost:8085` → see DAG `daily_sales` failed → click to view logs                  |
 | Scheduler   | Brain that parses DAGs and triggers tasks when dependencies are met    | At 2:00 AM, scheduler sees `@daily` DAG → creates DAG Run → queues `extract_task`                  |
 | Executor    | Dispatcher that decides **how** tasks run (local, distributed, or K8s) | `CeleryExecutor` sends 50 tasks to 5 worker machines; `LocalExecutor` runs 4 tasks on same machine |
 
@@ -69,103 +69,63 @@ It's an open-source workflow orchestration platform for programmatically authori
 
 ### Airflow Install & Configuration
 
-#### System Update & Upgrade
-
 ```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-#### Required Dependancy Install
-
-```bash
-sudo apt install -y \
-    build-essential \
-    libssl-dev \
-    libffi-dev \
-    python3-dev \
-    python3-pip \
-    python3-venv \
-    curl \
-    git
-```
-
-#### Create User and Password
-
-```bash
-sudo useradd -m -s /bin/bash airflow
-sudo passwd airflow
+sudo chmod +x 01-airflow-setup.sh
+sudo chmod +x 02-airflow-start.sh
 ```
 
 ```bash
-sudo su - airflow
-```
-
-#### Environment Setup and Update
-
-```bash
-python3 -m venv airflow-venv
-source airflow-venv/bin/activate
+./01-airflow-setup.sh
+./02-airflow-start.sh
 ```
 
 ```bash
-pip install --upgrade pip setuptools wheel
+http://localhost:8085 # Username: admin, Password: Collect from logs
 ```
 
-#### Set Airflow version
+### Hands-on Project
 
 ```bash
-export AIRFLOW_VERSION=3.2.0
-export PYTHON_VERSION=3.14
-export CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+source ~/venv/airflow_3.0.6/bin/activate
 ```
 
-#### Install Apache Airflow
-
 ```bash
-pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
-pip install apache-airflow==3.2.0
-```
-
-#### Initialize Airflow database
-
-```bash
+# Set up Airflow home
 export AIRFLOW_HOME=~/airflow
+mkdir -p $AIRFLOW_HOME/dags
+
+# Initialize the metadata database
 airflow db migrate
-```
 
-#### Create admin user
-
-```bash
-airflow standalone # Recommended
-```
-
-**Or**
-
-```bash
-airflow users create \
+# Create an admin user for the web UI
+airflow users add \
     --username admin \
-    --firstname Admin \
-    --lastname User \
+    --firstname Md \
+    --lastname Jakaria \
     --role Admin \
     --email admin@example.com \
-    --password admin
+    --password 054003
 ```
 
-#### Start Airflow services - `Terminal 1`
+```bash
+# Create Your First DAG
+sudo vi ~/airflow/dags/first_dag.py
+````
 
 ```bash
-airflow webserver --port 8085
+# List all DAGs
+airflow dags list
+# You should see "etl_tutorial_dag" in the output
 ```
 
-#### Start Airflow services - Terminal 2 (Scheduler)
-
 ```bash
-su - airflow
-python3 -m venv airflow-venv
-source airflow-venv/bin/activate
+# Terminal 1 - Start the Scheduler (must keep running)
+source ~/venv/airflow_3.0.6/bin/activate
 airflow scheduler
 ```
 
 ```bash
-http://<your-server-ip>:8080 # Username: admin, Password: collect from cli log
+# Terminal 2 - Start the Web Server (must keep running)
+source ~/venvs/airflow_3.0.6/bin/activate
+airflow webserver --port 8085
 ```
