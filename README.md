@@ -1,18 +1,10 @@
 ## More About Me – [Take a Look!](http://www.mjakaria.me)
 
-### Roadmap of Artificial Intelligence (AI)
-
-`Comprehensive roadmap to learn Artificial Intelligence (AI)` — from beginner to pro, structured in clear phases with recommended topics, tools, and resources.
-
-![AI Model](/img/ai-model.png)
-
-#### Complete AI Learning Flow
-
-`AI Fundamentals` → `Machine Learning` → `Deep Learning` → `LLMs` → `Generative AI` → `RAG` → `Agentic AI` → `Multimodal AI` → `AI Engineering & Deployment`.
-
-### Overview of Modern AI Technologies
+### Overview
 
 It's a broad and continuously evolving field that includes multiple technologies, approaches, and application areas. Modern AI systems are built by combining different capabilities such as learning from data, understanding information, generating content, retrieving knowledge, and taking intelligent actions.
+
+![AI Model](/img/ai-model.png)
 
 Modern (Industry Focus) AI Learning Priority
 
@@ -43,38 +35,24 @@ Modern (Industry Focus) AI Learning Priority
 | **Explainable AI (XAI)**        | Explain AI decisions           | Model interpretation, transparency methods                                         | Interpretability, fairness                                                                     |
 | **Responsible AI**              | Ensure safe AI usage           | Governance, privacy, security, compliance                                          | Bias mitigation, accountability, safety                                                        |
 
-## Tools
+### Complete AI Learning Flow
 
-AI is a broad field. The core components you'll need to master include:
-
-- 🧮 Mathematics for Machine Learning
-- 💻 Programming in Python
-- 🤖 Machine Learning (ML)
-- 🧠 Neural Networks (NN)
-- 🔍 Deep Learning (DL)
-- 🧰 Tools & Frameworks
-- 💼 Projects
-- 🚀 Advanced Topics (NLP, Computer Vision, Reinforcement Learning)
-
-### Mathematics for Machine Learning
-
-1. `Linear Algebra:` Vectors, matrices, dot product, eigenvalues.
-2. `Probability & Statistics:` Distributions, Bayes’ Theorem, expectation.
-3. `Calculus Basics:` Derivatives, gradients, chain rule.
-4. `Optimization:` Gradient descent, cost functions
-
-### Programming in Python-[Visit](https://github.com/jakir-ruet/mastering-with-python)
-
-Be comfortable writing and debugging Python code for data and ML.
-
-1. Python Syntax, Python Comments, Python Variables, Python Data Types, Python Numbers, Python Casting, Python Strings, Python Booleans, Python Operators.
-2. Python Lists, Python Tuple, Python Sets, Python Dictionaries Python If...Else, Python Match.
-3. Python While Loops, Python for Loops, Python Functions, Python Lambda.
-4. Python Classes/Objects, Python Inheritance, Python Iterators Python Polymorphism.
-5. Python Polymorphism, Python Modules Python Dates, Python Math.
-6. Python JSON, Python RegEx, Python PIP, Python Try...Except.
-7. Python String Formatting, Python User Input, Python VirtualEnv.
-8. Python File Handling, Python Read Files, Python Write/Create Files Python Delete Files.
+| SL  | Stage                          | Key Topics                                                         | Example                           |
+| --- | ------------------------------ | ------------------------------------------------------------------ | --------------------------------- |
+| 1   | **AI Fundamentals**            | AI types, learning types, training, inference, evaluation          | Student risk classification       |
+| 2   | **Python & AI Math**           | Python, NumPy, Pandas, vectors, matrices, statistics, gradients    | Analyze student performance data  |
+| 3   | **Machine Learning**           | Regression, classification, trees, clustering, feature engineering | Student dropout prediction        |
+| 4   | **Deep Learning**              | Neural networks, backpropagation, CNN, RNN, LSTM                   | Student performance prediction    |
+| 5   | **Transformers**               | Attention, self-attention, encoder, decoder                        | Context-aware text analysis       |
+| 6   | **LLMs**                       | Tokens, pretraining, fine-tuning, inference, context windows       | Student policy assistant          |
+| 7   | **Generative AI**              | Prompting, structured output, tool calling, guardrails             | AI student copilot                |
+| 8   | **Embeddings & Vector Search** | Embeddings, similarity, vector DB, hybrid search                   | Semantic policy search            |
+| 9   | **RAG**                        | Chunking, retrieval, reranking, grounding, citations               | School knowledge assistant        |
+| 10  | **Agentic AI**                 | Agents, tools, planning, memory, MCP, workflows                    | Student operations agent          |
+| 11  | **Multimodal AI**              | Text, image, audio, video, OCR, vision                             | Analyze exam-paper images         |
+| 12  | **AI Engineering**             | AI APIs, gateways, caching, streaming, security, observability     | Spring Boot AI platform           |
+| 13  | **LLMOps / MLOps**             | Versioning, evaluation, monitoring, CI/CD, drift                   | AI deployment pipeline            |
+| 14  | **Cloud AI Architecture**      | Kubernetes, GPU, scaling, IAM, HA/DR, cost                         | Production enterprise AI platform |
 
 ### Python Libraries for Machine Learning & Deep Learning
 
@@ -125,183 +103,11 @@ Be comfortable writing and debugging Python code for data and ML.
 | PyTest  | Testing               | Unit testing ML code                 | Code validation   |
 | Joblib  | Serialization         | Save/load ML models                  | Model storage     |
 
-### Machine Learning (ML)
-
-Machine Learning is a branch of artificial intelligence (AI) that enables computers to learn patterns and make decisions or predictions from data without being explicitly programmed. Instead of following fixed rules, machine learning algorithms automatically improve their performance over time as they are exposed to more data and experience. In Simple terms
-
-| Traditional programming                                           | Machine Learning                                                  |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| You give the computer `rules` + `data` → it produces an `answer`. | You give the computer `data` + `answers` → it learns the `rules`. |
-
-### How Machine Learning Works (High-Level)
-
-| Step | Stage                                        | What Happens                                                                         | Simple Meaning                            |
-| ---- | -------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------- |
-| 1    | Data Collection                              | Gather raw data (images, text, numbers, logs, etc.)                                  | Get information to learn from             |
-| 2    | Data Preparation (Preprocessing)             | Clean data, handle missing values, normalize, encode, and split into train/test sets | Make data ready for the model             |
-| 3    | Feature Engineering (optional but important) | Create or select meaningful features from raw data                                   | Improve quality of input data             |
-| 4    | Model Selection                              | Choose an algorithm (e.g., Linear Regression, Decision Tree, Neural Network)         | Decide how the system will learn          |
-| 5    | Model Training                               | Feed training data into the model so it learns patterns                              | Model learns from examples                |
-| 6    | Model Evaluation                             | Test model on unseen data using metrics (accuracy, F1, RMSE, etc.)                   | Check how well it performs                |
-| 7    | Model Deployment / Usage                     | Use the trained model in real applications for predictions                           | Make real-world predictions automatically |
-
-### Main Types of Machine Learning & Models
-
-| Type                       | What it does                                    | Example                               | Student Analogy                     | Why                                                  |
-| -------------------------- | ----------------------------------------------- | ------------------------------------- | ----------------------------------- | ---------------------------------------------------- |
-| **Supervised Learning**    | Learns from labeled data (has correct answers)  | Predict house prices, spam detection  | Student learns with an answer sheet | Can compare answers and improve using correct labels |
-| **Unsupervised Learning**  | Finds hidden patterns in unlabeled data         | Customer segmentation, topic grouping | Student has no answer sheet         | Must discover patterns on their own                  |
-| **Reinforcement Learning** | Learns by reward and punishment (trial & error) | Game AI, robots, self-driving cars    | Student learns from marks/rewards   | Improves actions based on feedback                   |
-
-> **Simple memory trick**
->
-> - `Supervised` → Teacher shows answers
-> - `Unsupervised` → Student discovers patterns
-> - `Reinforcement` → Learn by reward & punishment
->
-```bash
-Machine Learning
-│
-├── Supervised Learning
-│     ├── Classification Models
-│     │     ├── Binary (Spam detection)
-│     │     ├── Multi-class (Animal classification)
-│     │     └── Multi-label (Image tagging)
-│     │
-│     └── Regression Models
-│           ├── Linear (House price)
-│           ├── Polynomial (Growth curve)
-│           └── Regularized (Salary prediction)
-│
-├── Unsupervised Learning
-│     ├── Clustering Models
-│     │     ├── K-Means (Customer groups)
-│     │     ├── DBSCAN (Fraud detection)
-│     │     └── Hierarchical (Document grouping)
-│     │
-│     └── Dimensionality Reduction
-│           ├── PCA (Feature reduction)
-│           ├── t-SNE (Visualization)
-│           └── SVD (Text processing)
-│
-├── Semi-Supervised Learning
-│     ├── Label Propagation (Image labeling)
-│     └── Self-training (Text classification)
-│
-└── Reinforcement Learning
-      ├── Value-based (Q-learning)
-      ├── Policy-based (Robot control)
-      └── Model-based (Self-driving cars)
-```
-
-> **Master Summary**
->
-> - Classification → Predict categories
-> - Regression → Predict numbers
-> - Clustering → Group data
-> - Dimensionality Reduction → Compress data
-> - Reinforcement Learning → Learn by reward
-
 **Remove some generated file & directory**
 
 ```bash
 find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \)
 find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm -r {} +
-```
-
-## Large Language Model - `LLM`
-
-An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples and comparison below;
-
-| Model Family | Creator        | Type              | Main Strength                           | Local Running | Customization | Privacy   | Multimodal |
-| ------------ | -------------- | ----------------- | --------------------------------------- | ------------- | ------------- | --------- | ---------- |
-| GPT          | OpenAI         | Closed-source     | General intelligence, reasoning, coding | No            | Medium        | Medium    | Excellent  |
-| LLaMA        | Meta Platforms | Open-weight       | Local AI, customization, research       | Yes           | Excellent     | Excellent | Improving  |
-| Claude       | Anthropic      | Closed-source     | Writing, analysis, long documents       | No            | Low           | Medium    | Good       |
-| Gemini       | Google         | Closed-source     | Multimodal AI, Google ecosystem         | No            | Low           | Medium    | Excellent  |
-| Mistral      | Mistral AI     | Open & commercial | Efficiency, deployment flexibility      | Yes           | Good          | Good      | Limited    |
-
-- **LLaMA** > Large Language Model Meta AI
-- **GPT** > Generative Pre-trained Transformer
-
-> Key Characteristics
->
-> - `Large` → trained on billions or trillions of words
-> - `Language` → works with human text (English, Bangla, etc.)
-> - `Model` → a mathematical neural network that learns patterns
-
-### Chef Analogy - Restaurant
-
-Imagine a famous chef. The chef has cooked:
-
-- Pizza
-- Pasta
-- Curry
-- Sushi
-- Burgers
-- Desserts
-
-**Now someone says:** *Make me something spicy with chicken.* **The chef doesn't search a recipe book every time.** Instead, the chef combines experience from thousands of previous dishes.
-
-> An LLM works similarly. It doesn't retrieve a fixed answer from memory. It generates a response based on patterns learned during training.
-
-### What an LLM cannot reliably do?
-
-An LLM is **not** a perfect source of truth. It can:
-
-- Make factual mistakes/**Hallucinations**
-- Be unaware of events after its training unless connected to external tools
-- Produce confident-sounding but incorrect answers
-- Misunderstand ambiguous prompts
-
-> For tasks that require current or authoritative information, LLMs are often combined with search engines or databases.
-
-### LLM vs Search Engine
-
-| LLM                              | Search Engine                   |
-| -------------------------------- | ------------------------------- |
-| Generates an answer              | Finds relevant documents        |
-| Learns from training data        | Searches indexed web pages      |
-| Can explain and reason over text | Primarily retrieves information |
-| May make mistakes                | Can point to original sources   |
-
-> Many modern AI assistants combine both: the LLM generates the response while a search system retrieves up-to-date information when needed.
-
-### How an LLM (e.g., GPT) Generates a Response
-
-| Step                                               | What Happens                                                                                   | Example                                                                       |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **1. User Prompt**                                 | User sends input text                                                                          | `"Explain Docker in simple terms."`                                           |
-| **2. Tokenization**                                | Text is split into tokens and converted into numbers (IDs)                                     | `"Explain Docker"` → `[1245, 9821, 304]`                                      |
-| **3. Embedding + Transformer Processing**          | Tokens are converted into vectors and processed through attention layers to understand context | Model understands that *“Docker” = technology*, *“simple” = easy explanation* |
-| **4. Context Understanding (Attention Mechanism)** | Model focuses on important words and relationships                                             | “simple” affects explanation style                                            |
-| **5. Probability Prediction**                      | Model calculates probability of next possible token                                            | `P("is") = 0.35`, `P("Docker") = 0.20`, `P("a") = 0.25`                       |
-| **6. Next Token Selection**                        | One token is selected (highest probability or sampling)                                        | `"Docker"`                                                                    |
-| **7. Iterative Generation**                        | Steps 4–6 repeat to build full sentence                                                        | `"Docker is a platform that..."`                                              |
-| **8. Final Response Output**                       | Complete response is returned to user                                                          | Full explanation appears                                                      |
-
-> - `User Prompt → Tokenization → Embedding → Transformer (Attention) → Probability Prediction → Token Generation → Full Response`
-
-### LLaMA + Ollama + Open WebUI - Install - Recommended
-
-```bash
-ollama pull llama3.2
-ollama list
-ollama run llama3.2
-```
-
-```bash
-docker run -d \
-  -p 3000:8080 \
-  --add-host=host.docker.internal:host-gateway \
-  -v open-webui:/app/backend/data \
-  --name open-webui \
-  --restart always \
-  ghcr.io/open-webui/open-webui:main
-```
-
-```bash
-http://localhost:3000
 ```
 
 ### Prompt
@@ -321,60 +127,6 @@ A prompt is the input (instruction, question, or text) that you give to an AI mo
 | **Few-Shot**         | Multiple examples given        | `Bad → Negative`<br>`Great → Positive`<br>`Awesome →` |
 | **Role-Based**       | Assign a role                  | `Act as a DevOps engineer.`                           |
 | **Chain-of-Thought** | Ask for step-by-step reasoning | `Solve 25 × 12 step by step.`                         |
-
-## Big Picture
-
-Below is a complete MLOps / Machine Learning engineering lifecycle guide. It focuses on the reality that ML is an end-to-end production system, not just model training.
-
-1. Data gathering, collecting, and processing raw data
-2. Data analysis
-3. Data preparation
-4. Model training and development.
-5. Model evaluation and validation
-6. Model serving
-7. Model health monitoring
-8. Model re-training and iterations
-9. Orchestration
-10. Governance
-
-![MLOps Lifecycle](/img/mlops-lifecycle.png)
-
-| #   | Phase                          | What happens                                         | Key Tools                                         | Example in real system                                 |
-| --- | ------------------------------ | ---------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |
-| 1   | Data Gathering & Processing    | Collect raw data from sources and clean it           | Apache Kafka, Airflow, Spark, Pandas, S3, APIs    | Collect user logs → store in S3 → clean missing values |
-| 2   | Data Analysis (EDA)            | Understand data quality, patterns, anomalies         | Pandas, Matplotlib, Seaborn, ydata-profiling      | Check missing values, distributions, outliers          |
-| 3   | Data Preparation               | Feature engineering + transformation                 | Scikit-learn pipelines, Featuretools, Spark ML    | Normalize salary, encode categories, build features    |
-| 4   | Model Training & Development   | Train ML models + experiment tracking                | Scikit-learn, TensorFlow, PyTorch, MLflow         | Train RandomForest / XGBoost, log experiments          |
-| 5   | Model Evaluation & Validation  | Measure performance and compare models               | MLflow, Scikit-learn metrics, Optuna              | Compare RMSE of multiple models, cross-validation      |
-| 6   | Model Serving                  | Deploy model for real-time or batch inference        | FastAPI, Flask, MLflow Models, Docker, Kubernetes | REST API: `/predict` returns model prediction          |
-| 7   | Model Health Monitoring        | Monitor drift, performance, system health            | Prometheus, Grafana, Evidently AI, Datadog        | Detect accuracy drop or data drift over time           |
-| 8   | Model Re-training & Iteration  | Retrain model when data changes or performance drops | Airflow, Kubeflow, CronJobs, MLflow               | Weekly retraining pipeline triggered automatically     |
-| 9   | Containerization Orchestration | Automate full ML pipeline execution                  | Apache Airflow, Prefect, Kubeflow Pipelines       | DAG: ingest → train → evaluate → deploy                |
-| 10  | Governance Monitoring          | Ensure traceability, compliance, version control     | MLflow Registry, DVC, Git, IAM, Audit logs        | Track model versions, approve staging → production     |
-
-> ML in production = data + code + infrastructure + automation + governance
-
-### Core ML Pipeline (End-to-End System)
-
-| Steps | Stage                    | What Happens               | Purpose              | Input → Output           | Tools                           | Real Example (Dog Detection)    |
-| :---: | ------------------------ | -------------------------- | -------------------- | ------------------------ | ------------------------------- | ------------------------------- |
-|   1   | Problem Definition       | Define the ML problem      | Understand goal      | Business idea → ML task  | Domain knowledge                | `Is this image a dog or not?`   |
-|   2   | Data Collection          | Gather raw data            | Build dataset        | Images/CSV/API → Dataset | APIs, SQL, Kaggle, Web scraping | Dog + non-dog images            |
-|   3   | Data Understanding (EDA) | Analyze data patterns      | Understand structure | Raw data → Insights      | Pandas, Matplotlib, Seaborn     | Check image size, labels        |
-|   4   | Data Preprocessing       | Clean & prepare data       | Fix data issues      | Raw data → Clean data    | Pandas, NumPy, Scikit-learn     | Resize images, normalize pixels |
-|   5   | Feature Engineering      | Convert data into features | Improve model input  | Clean data → Features    | PCA, Encoding, TF-IDF           | Image → pixel vectors           |
-|   6   | Train/Test Split         | Split dataset              | Avoid overfitting    | Dataset → Train + Test   | sklearn.model_selection         | 80% train, 20% test             |
-|   7   | Model Selection          | Choose algorithm           | Find best model      | Features → Model         | SVM, RF, KNN, XGBoost           | Random Forest chosen            |
-|   8   | Model Training           | Learn patterns             | Build intelligence   | Train data → Model       | fit() (Sklearn, PyTorch)        | Model learns dog patterns       |
-|   9   | Evaluation               | Measure performance        | Check accuracy       | Predictions → Metrics    | Accuracy, F1, ROC-AUC           | 95% accuracy                    |
-|  10   | Hyperparameter Tuning    | Improve model              | Optimize performance | Model → Better model     | GridSearchCV, Optuna            | Improve Random Forest           |
-|  11   | Packaging                | Save model                 | Reuse model          | Model → File             | Pickle, Joblib                  | model.pkl saved                 |
-|  12   | Deployment               | Make model live            | Real-world usage     | Model → API/App          | Flask, FastAPI, Docker          | Dog detection web app           |
-|  13   | Monitoring               | Track performance          | Maintain model       | Logs → Metrics           | MLflow, Grafana                 | Detect performance drop         |
-|  14   | Continuous Improvement   | Retrain model              | Keep improving       | New data → Updated model | CI/CD pipelines                 | Better dog detection            |
-
-> - Machine Learning ecosystem = `Data (Pandas) → Model (Sklearn/XGBoost/PyTorch) → Optimize (Optuna) → Save (Joblib/Pickle) → Deploy (Flask/Docker)`
-> - EDA = Exploratory Data Analysis
 
 ### Preprocessing & Feature Engineering Stack
 
