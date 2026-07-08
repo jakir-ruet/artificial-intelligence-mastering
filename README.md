@@ -174,14 +174,50 @@ find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm 
 
 ## Large Language Model - `LLM`
 
-An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families:
-GPT models, LLaMA, Claude, Mistral, Gemini etc.
+An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families: `GPT models`, `LLaMA`, `Claude`, `Mistral`, `Gemini` etc.
 
 > Key Characteristics
 >
 > - `Large` → trained on billions or trillions of words
 > - `Language` → works with human text (English, Bangla, etc.)
 > - `Model` → a mathematical neural network that learns patterns
+
+### Chef Analogy - Restaurant
+
+Imagine a famous chef. The chef has cooked:
+
+- Pizza
+- Pasta
+- Curry
+- Sushi
+- Burgers
+- Desserts
+
+**Now someone says:** *Make me something spicy with chicken.* **The chef doesn't search a recipe book every time.** Instead, the chef combines experience from thousands of previous dishes.
+
+> An LLM works similarly. It doesn't retrieve a fixed answer from memory. It generates a response based on patterns learned during training.
+
+### What an LLM cannot reliably do?
+
+An LLM is **not** a perfect source of truth. It can:
+
+- Make factual mistakes/**Hallucinations**
+- Be unaware of events after its training unless connected to external tools
+- Produce confident-sounding but incorrect answers
+- Misunderstand ambiguous prompts
+
+> For tasks that require current or authoritative information, LLMs are often combined with search engines or databases.
+
+### LLM vs Search Engine
+
+| LLM                              | Search Engine                   |
+| -------------------------------- | ------------------------------- |
+| Generates an answer              | Finds relevant documents        |
+| Learns from training data        | Searches indexed web pages      |
+| Can explain and reason over text | Primarily retrieves information |
+| May make mistakes                | Can point to original sources   |
+
+> Many modern AI assistants combine both: the LLM generates the response while a search system retrieves up-to-date information when needed.
 
 ### How an LLM (e.g., GPT) Generates a Response
 
@@ -202,7 +238,7 @@ GPT models, LLaMA, Claude, Mistral, Gemini etc.
 
 A prompt is the input (instruction, question, or text) that you give to an AI model to generate a response.
 
-> Simply: `Prompt` = `What you tell the AI`
+> Simply: `Prompt = What you tell the AI to do`
 
 #### Prompt Types
 
