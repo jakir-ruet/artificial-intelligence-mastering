@@ -4,8 +4,6 @@
 
 It's a broad and continuously evolving field that includes multiple technologies, approaches, and application areas. Modern AI systems are built by combining different capabilities such as learning from data, understanding information, generating content, retrieving knowledge, and taking intelligent actions.
 
-![AI Model](/img/ai-model.png)
-
 Modern (Industry Focus) AI Learning Priority
 
 | Priority | Area                       | Why It Matters                                  |

@@ -349,4 +349,3 @@ Where,
 | **7. Deployment**          | Serve predictions         | REST API                 |
 | **8. Monitoring**          | Track production behavior | Accuracy, drift, latency |
 | **9. Retraining**          | Update with new data      | Train new model version  |
-
