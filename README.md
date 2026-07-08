@@ -6,7 +6,44 @@
 
 ![AI Model](/img/ai-model.png)
 
-## OVERVIEW
+#### Complete AI Learning Flow
+
+`AI Fundamentals` → `Machine Learning` → `Deep Learning` → `LLMs` → `Generative AI` → `RAG` → `Agentic AI` → `Multimodal AI` → `AI Engineering & Deployment`.
+
+### Overview of Modern AI Technologies
+
+It's a broad and continuously evolving field that includes multiple technologies, approaches, and application areas. Modern AI systems are built by combining different capabilities such as learning from data, understanding information, generating content, retrieving knowledge, and taking intelligent actions.
+
+Modern (Industry Focus) AI Learning Priority
+
+| Priority | Area                       | Why It Matters                                  |
+| -------- | -------------------------- | ----------------------------------------------- |
+| 1        | **Generative AI + LLMs**   | Foundation of modern AI applications            |
+| 2        | **Prompt Engineering**     | Improves interaction with AI models             |
+| 3        | **RAG**                    | Enables AI to use private and current knowledge |
+| 4        | **Agentic AI**             | Enables AI to perform tasks and workflows       |
+| 5        | **Multimodal AI**          | Combines text, images, audio, and video         |
+| 6        | **AI Engineering & MLOps** | Deploys AI systems into production              |
+
+| **AI Area**                     | **Purpose**                    | **Topics**                                                                         | **Key Concepts**                                                                               |
+| ------------------------------- | ------------------------------ | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Traditional AI**              | Rule-based decision making     | Expert systems, logic, knowledge representation                                    | Rules, facts, inference                                                                        |
+| **Machine Learning (ML)**       | Learn patterns from data       | Classification, regression, clustering, recommendation                             | Features, training, validation, evaluation                                                     |
+| **Deep Learning (DL)**          | Neural network-based learning  | Neural networks, CNNs, RNNs, Transformers                                          | Layers, weights, optimization, GPUs                                                            |
+| **NLP**                         | Understand human language      | Text analysis, translation, summarization, Q&A                                     | Tokens, embeddings, language models                                                            |
+| **Computer Vision AI**          | Understand images and videos   | Image recognition, detection, segmentation                                         | Pixels, features, vision models                                                                |
+| **Speech AI**                   | Process human speech           | Speech recognition, text-to-speech, voice assistants                               | Audio processing, speech models                                                                |
+| **Generative AI**               | Create new content             | LLMs, foundation models, text/image/audio/video/code generation, multimodal models | Tokens, context windows, prompting, temperature, sampling, alignment, instruction tuning, RLHF |
+| **RAG**                         | Add external knowledge to AI   | Document retrieval, embeddings, vector databases, search pipelines                 | Retrieval, similarity search, reranking, grounding, citations                                  |
+| **Agentic AI**                  | Plan and perform tasks         | AI agents, tool use, workflows, memory, multi-agent systems                        | Reasoning, planning, tool calling, feedback loops                                              |
+| **Multimodal AI**               | Understand multiple data types | Vision-language, document AI, audio-text models                                    | Multimodal embeddings, fusion, modality alignment                                              |
+| **Reinforcement Learning (RL)** | Learn through rewards          | Policy learning, robotics, game AI                                                 | Agents, rewards, exploration                                                                   |
+| **Robotics AI**                 | Control physical systems       | Navigation, perception, manipulation                                               | Sensors, control, mapping                                                                      |
+| **Autonomous AI Systems**       | Operate independently          | Self-driving, automation, autonomous agents                                        | Planning, execution, monitoring                                                                |
+| **Explainable AI (XAI)**        | Explain AI decisions           | Model interpretation, transparency methods                                         | Interpretability, fairness                                                                     |
+| **Responsible AI**              | Ensure safe AI usage           | Governance, privacy, security, compliance                                          | Bias mitigation, accountability, safety                                                        |
+
+## Tools
 
 AI is a broad field. The core components you'll need to master include:
 
@@ -174,7 +211,18 @@ find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm 
 
 ## Large Language Model - `LLM`
 
-An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples of real-world LLM families: `GPT models`, `LLaMA`, `Claude`, `Mistral`, `Gemini` etc.
+An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples and comparison below;
+
+| Model Family | Creator        | Type              | Main Strength                           | Local Running | Customization | Privacy   | Multimodal |
+| ------------ | -------------- | ----------------- | --------------------------------------- | ------------- | ------------- | --------- | ---------- |
+| GPT          | OpenAI         | Closed-source     | General intelligence, reasoning, coding | No            | Medium        | Medium    | Excellent  |
+| LLaMA        | Meta Platforms | Open-weight       | Local AI, customization, research       | Yes           | Excellent     | Excellent | Improving  |
+| Claude       | Anthropic      | Closed-source     | Writing, analysis, long documents       | No            | Low           | Medium    | Good       |
+| Gemini       | Google         | Closed-source     | Multimodal AI, Google ecosystem         | No            | Low           | Medium    | Excellent  |
+| Mistral      | Mistral AI     | Open & commercial | Efficiency, deployment flexibility      | Yes           | Good          | Good      | Limited    |
+
+- **LLaMA** > Large Language Model Meta AI
+- **GPT** > Generative Pre-trained Transformer
 
 > Key Characteristics
 >
@@ -233,6 +281,28 @@ An LLM is **not** a perfect source of truth. It can:
 | **8. Final Response Output**                       | Complete response is returned to user                                                          | Full explanation appears                                                      |
 
 > - `User Prompt → Tokenization → Embedding → Transformer (Attention) → Probability Prediction → Token Generation → Full Response`
+
+### LLaMA + Ollama + Open WebUI - Install - Recommended
+
+```bash
+ollama pull llama3.2
+ollama list
+ollama run llama3.2
+```
+
+```bash
+docker run -d \
+  -p 3000:8080 \
+  --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:main
+```
+
+```bash
+http://localhost:3000
+```
 
 ### Prompt
 
