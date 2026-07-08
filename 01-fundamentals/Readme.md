@@ -112,7 +112,7 @@ Machine Learning
 | **Training**  | Learning process            | Learn from historical data |
 | **Inference** | Using model                 | Predict new student risk   |
 
-#### Dataset - A dataset is the complete collection of data used in an AI/ML system.
+#### 1. Dataset - A dataset is the complete collection of data used in an AI/ML system.
 
 | STUDENT_ID | ATTENDANCE | MARKS | FAILED | DROPOUT |
 | ---------- | ---------- | ----- | ------ | ------- |
@@ -122,18 +122,18 @@ Machine Learning
 
 > This entire table is the dataset.
 
-#### Sample - One individual record is a sample.
+#### 2. Sample - One individual record is a sample.
 
 **STUDENT_ID** Student 102
 
 | Title      | Sign | Marks |
-| ---------- | ---- | ---- |
-| Attendance | =    | 60   |
-| Marks      | =    | 45   |
-| Failed     | =    | 2    |
-| Dropout    | =    | YES  |
+| ---------- | ---- | ----- |
+| Attendance | =    | 60    |
+| Marks      | =    | 45    |
+| Failed     | =    | 2     |
+| Dropout    | =    | YES   |
 
-#### Feature - A feature is an input variable used by the model.
+#### 3. Feature - A feature is an input variable used by the model.
 
 Features:
 - Attendance
@@ -141,7 +141,7 @@ Features:
 - Failed Subjects
 - Fee Delay
 
-#### Label - A label is the expected output or target.
+#### 4. Label - A label is the expected output or target.
 
 ```bash
 Features:
@@ -153,14 +153,14 @@ Label:
 Dropout = YES
 ```
 
-#### Algorithm - An algorithm is the learning procedure.
+#### 5. Algorithm - An algorithm is the learning procedure.
 
 - Linear Regression
 - Logistic Regression
 - Decision Tree
 - Random Forest
 
-#### Model - A model is the result produced after an algorithm learns from data.
+#### 6. Model - A model is the result produced after an algorithm learns from data.
 
 ```bash
 Algorithm + Training Data
@@ -170,7 +170,7 @@ Algorithm + Training Data
      Trained Model
 ```
 
-#### Training - Training is the learning process.
+#### 7. Training - Training is the learning process.
 
 ```bash
 Historical Data
@@ -184,9 +184,15 @@ Reduce Errors
 Trained Model
 ```
 
+**Example:**
+
+1. Student 1: Attendance 95%, Marks 88 → NO DROPOUT
+2. Student 2: Attendance 55%, Marks 40 → DROPOUT
+3. Student 3: Attendance 70%, Marks 60 → NO DROPOUT
+
 > The model learns patterns from known examples.
 
-#### Inference - Inference means using a trained model on new data.
+#### 8. Inference - Inference means using a trained model on new data.
 
 ```bash
 New Student
@@ -201,6 +207,18 @@ Dropout Risk = 89%
 ```
 
 > No new learning is required here. The existing model is being used for prediction.
+
+### Training vs Inference - Simple Comparison
+
+| Training               | Inference                       |
+| ---------------------- | ------------------------------- |
+| Model learns from data | Uses learned patterns           |
+| Learns patterns        | Trained model makes predictions |
+| Historical data        | New data                        |
+| Expensive              | Usually cheaper                 |
+| Slower                 | Usually faster                  |
+| Updates parameters     | Parameters normally fixed       |
+| Done periodically      | Can happen continuously         |
 
 ### Complete Flow
 
@@ -225,3 +243,110 @@ Prediction
 ### What is the difference between an algorithm and a model?
 
 An algorithm is the method used to learn patterns from data, while a model is the trained artifact produced after applying that algorithm to training data.
+
+### AI Problem Types —
+
+**1. Classification** - Classification predicts a category or class.
+**2. Regression** - Regression Analysis predicts a continuous numeric value.
+**3. Clustering** - Cluster Analysis automatically groups similar data.
+**4. Anomaly Detection** - Anomaly Detection finds unusual or abnormal patterns.
+
+| Problem Type          | Output       | Example                |
+| --------------------- | ------------ | ---------------------- |
+| **Classification**    | Category     | Dropout: Yes / No      |
+| **Regression**        | Number       | Final score: 78.5      |
+| **Clustering**        | Groups       | Group similar students |
+| **Anomaly Detection** | Unusual case | Suspicious attendance  |
+
+| Requirement                  | Problem Type      |
+| ---------------------------- | ----------------- |
+| Will student drop out?       | Classification    |
+| What will final score be?    | Regression        |
+| Group similar students       | Clustering        |
+| Detect suspicious attendance | Anomaly Detection |
+
+### Model Evaluation - How good is the model?
+
+| Metric    | Full Form                                            | Meaning                                                     | When to Use                         |
+| --------- | ---------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------- |
+| Accuracy  | Accuracy Score                                       | Percentage of correct predictions                           | When dataset is balanced            |
+| Precision | Precision Score                                      | Correct positive predictions out of all predicted positives | When false positives are costly     |
+| Recall    | Recall (Sensitivity)                                 | Correct positives out of all actual positives               | When missing positives is costly    |
+| F1 Score  | F1 Score                                             | Harmonic mean of Precision and Recall                       | For imbalanced datasets             |
+| ROC-AUC   | Receiver Operating Characteristic - Area Under Curve | Measures model’s ability to distinguish between classes     | Binary classification problems      |
+| Log Loss  | Logarithmic Loss                                     | Penalizes confident wrong predictions                       | Probabilistic classification models |
+
+#### Accuracy Calculation
+
+`Accuracy` = `(𝑇𝑃 + 𝑇𝑁)`/`(𝑇𝑃 + 𝑇𝑁 + 𝐹𝑃 + 𝐹𝑁)`
+
+Where,
+- `TP:` True Positive (correctly predicted `yes`)
+- `TN:` True Negative (correctly predicted `no`)
+- `FP:` False Positive (incorrectly predicted `yes`)
+- `FN:` False Negative (missed a `yes`)
+
+> Works well when classes are balanced. Misleading for imbalanced data (e.g., 99% non-fraud, 1% fraud).
+
+#### Precision Calculation
+
+`Precision` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑃)`
+
+> High precision = few false alarms.
+
+#### Recall Calculation
+
+`Recall` = `𝑇𝑃`/`(𝑇𝑃 + 𝐹𝑁)`
+
+> High recall = you catch most of the positive cases.
+
+#### F1 Score Calculation
+
+`𝐹1` = `2` × (`(Precision × Recall)`/`(Precision + Recall)`)
+
+> Useful when you want a balance between precision and recall.
+
+#### Predicting Machine Maintenance
+
+| Strategy               | Precision | Recall   | Note                                 |
+| ---------------------- | --------- | -------- | ------------------------------------ |
+| Predict all machines   | Low       | High     | Catch all potential issues           |
+| Predict only when sure | High      | Low      | Avoid unnecessary maintenance        |
+| F1 score               | Balanced  | Balanced | Trade-off between precision & recall |
+
+> High accuracy does not always mean a good model.
+
+**1. Underfitting** - Underfitting happens when the model does not learn enough.
+
+- Training Accuracy = 60%
+- Test Accuracy     = 58%
+
+**2. Good Fit**- The model learns real patterns and generalizes well.
+
+- Training Accuracy = 90%
+- Test Accuracy     = 87%
+
+**3. Overfitting** Overfitting happens when the model learns training data too specifically.
+
+- Training Accuracy = 99%
+- Test Accuracy     = 70%
+
+> Key Takeaway
+> - Underfitting → Model learns too little
+> - Good Fit → Model learns useful patterns
+> - Overfitting → Model learns training data too specifically
+
+### AI/ML Lifecycle
+
+| Step                       | Purpose                   | Student Example          |
+| -------------------------- | ------------------------- | ------------------------ |
+| **1. Problem Definition**  | Define business goal      | Predict student dropout  |
+| **2. Data Collection**     | Gather relevant data      | Attendance, marks, fees  |
+| **3. Data Preparation**    | Clean and transform data  | Handle missing marks     |
+| **4. Feature Engineering** | Create useful inputs      | Attendance rate          |
+| **5. Model Training**      | Learn patterns            | Train classifier         |
+| **6. Evaluation**          | Measure quality           | Precision, recall, F1    |
+| **7. Deployment**          | Serve predictions         | REST API                 |
+| **8. Monitoring**          | Track production behavior | Accuracy, drift, latency |
+| **9. Retraining**          | Update with new data      | Train new model version  |
+
