@@ -17,3 +17,5 @@
 /03-machine-learning/01-scikit-learn/01-classification-models/01-credit-risk-app/src/__pycache__
 
 03-machine-learning/student-dropout-ml/venv
+03-machine-learning/student-dropout-ml/api/__pycache__
+03-machine-learning/student-dropout-ml/src/__pycache__
