@@ -288,13 +288,112 @@ A Loss function measures how wrong a model’s prediction is compared with the a
 
 ### Back Propagation
 
+Backpropagation is the algorithm used to compute how the loss changes with respect to every trainable weight and bias in a neural network.
+
 ### Gradient Descent
+
+A gradient tells how much and in which local direction the loss changes when a model parameter, such as a weight or bias, changes. Formula - For one weight:
+
+```bash
+∂L
+──
+∂w
+```
+
+Where,
+
+- L = Loss
+- w = Weight
+- ∂L/∂w = Gradient of loss with respect to weight
+
+| Concept             | Analogy                | Technical Meaning                      |
+| ------------------- | ---------------------- | -------------------------------------- |
+| Forward propagation | Student answers        | Model predicts                         |
+| Loss                | Teacher marks mistake  | Error value                            |
+| Gradient            | Correction feedback    | Direction and size of parameter change |
+| Backpropagation     | Feedback sent backward | Compute gradients layer by layer       |
+| Optimizer           | Student adjusts method | Updates weights                        |
+
+**One-line memory**
+- **Gradient** = feedback
+- **Backpropagation** = process of calculating and sending that feedback backward
+- **Optimizer** = uses feedback to update weights
 
 ### Neural Network Training
 
+Neural Network Training is the iterative process of adjusting a network’s weights and biases so that its predictions become more accurate and its loss decreases. Core Training Terms
+
+| Term                 | Definition                                        | Example                           |
+| -------------------- | ------------------------------------------------- | --------------------------------- |
+| **Epoch**            | One complete pass through the training dataset    | All 1,000 students processed once |
+| **Batch**            | Subset of training samples                        | 32 students                       |
+| **Batch Size**       | Number of samples in one batch                    | `32`                              |
+| **Iteration / Step** | One parameter update                              | One batch → one update            |
+| **Learning Rate**    | Controls update step size                         | `0.001`                           |
+| **Loss**             | Measures prediction error                         | BCE loss                          |
+| **Gradient**         | Local sensitivity of loss to parameters           | `∂L/∂w`                           |
+| **Backpropagation**  | Computes gradients                                | `loss.backward()`                 |
+| **Optimizer**        | Uses gradients to update parameters               | Adam                              |
+| **Validation**       | Evaluates during training on unseen held-out data | Validation F1                     |
+
 ### Convolutional Neural Network (CNN)
 
+A Convolutional neural network, or CNN, is a deep-learning architecture designed to automatically learn spatial patterns from grid-like data, especially images.
+
+> CNN = Neural Network specialized for detecting local patterns such as edges, textures, shapes, and objects.
+
+#### Common CNN Tasks
+
+| Task                 | Example                         |
+| -------------------- | ------------------------------- |
+| Image Classification | Cat vs Dog                      |
+| Object Detection     | Find students in classroom      |
+| Image Segmentation   | Separate objects pixel-by-pixel |
+| OCR                  | Read exam papers                |
+| Face Recognition     | Identify person                 |
+| Medical Imaging      | Detect abnormalities            |
+| Document AI          | Analyze forms and invoices      |
+
 ### Recurrent Neural Network (RNN)/Long Short-Term Memory (LSTM)
+
+- A Recurrent neural network (RNN) is a neural-network architecture designed for sequential data, where the current computation depends on both the current input and information carried from previous time steps.
+- A Long short-term memory (LSTM) is a specialized type of RNN designed to preserve useful information over longer sequences and mitigate the vanishing-gradient problem.
+
+> - RNN = sequence processing with recurrent hidden state
+> - LSTM = RNN with gated memory control
+
+**LSTM Main Components**
+
+| Component           | Purpose                          |
+| ------------------- | -------------------------------- |
+| **Forget Gate**     | What old information to remove   |
+| **Input Gate**      | What new information to write    |
+| **Candidate State** | Proposed new memory content      |
+| **Cell State**      | Long-term memory pathway         |
+| **Output Gate**     | What memory to expose            |
+| **Hidden State**    | Current recurrent representation |
+
+**RNN vs LSTM**
+
+| Feature                       | RNN     | LSTM     |
+| ----------------------------- | ------- | -------- |
+| Sequential data               | Yes     | Yes      |
+| Hidden state                  | Yes     | Yes      |
+| Cell state                    | No      | Yes      |
+| Gates                         | No      | Yes      |
+| Long-range dependencies       | Weaker  | Better   |
+| Vanishing-gradient resistance | Limited | Improved |
+| Complexity                    | Lower   | Higher   |
+| Parameters                    | Fewer   | More     |
+
+**RNN vs LSTM vs CNN**
+
+| Model       | Best Suited For                       | Example                    |
+| ----------- | ------------------------------------- | -------------------------- |
+| CNN         | Spatial patterns                      | Student ID image           |
+| RNN         | Shorter/simple sequences              | Attendance sequence        |
+| LSTM        | Longer dependencies                   | Multi-semester performance |
+| Transformer | Long-range sequence modeling at scale | LLMs                       |
 
 #### Complete Deep Learning Connection
 
