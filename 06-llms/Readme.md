@@ -1,6 +1,8 @@
 ## Large Language Model - `LLM`
 
-An LLM is a computer model that learns language patterns from huge text datasets and can read, write, explain, translate, and answer questions like a human. Examples and comparison below;
+A Large language model (LLM) is a large neural network, typically based on the Transformer architecture, trained on massive datasets to model language and perform tasks such as generation, summarization, translation, question answering, coding, and reasoning-oriented workflows.
+
+> LLM = Transformer + Large-Scale Data + Large Parameter Count + Training + Adaptation
 
 | Model Family | Creator        | Type              | Main Strength                           | Local Running | Customization | Privacy   | Multimodal |
 | ------------ | -------------- | ----------------- | --------------------------------------- | ------------- | ------------- | --------- | ---------- |
@@ -91,4 +93,63 @@ docker run -d \
 
 ```bash
 http://localhost:3000
+
+
+### LLM Learning Flow
+
+| Step | Topic                    | Example                          |
+| ---- | ------------------------ | -------------------------------- |
+| 1    | LLM Fundamentals         | What is an LLM?                  |
+| 2    | Tokenization             | `"AI is great"` → tokens         |
+| 3    | Embeddings               | Token → vector                   |
+| 4    | Transformer Architecture | Attention blocks                 |
+| 5    | Next-Token Prediction    | `"AI is"` → `"powerful"`         |
+| 6    | Pretraining              | Learn broad language patterns    |
+| 7    | Context Window           | Prompt + history                 |
+| 8    | Inference                | Generate tokens                  |
+| 9    | Decoding                 | Temperature, Top-k, Top-p        |
+| 10   | Prompt Engineering       | Zero-shot, few-shot              |
+| 11   | Fine-Tuning              | Domain adaptation                |
+| 12   | Instruction Tuning       | Follow instructions              |
+| 13   | Preference Alignment     | Human/AI preference optimization |
+| 14   | Quantization             | FP16, INT8, INT4                 |
+| 15   | LLM Serving              | API inference                    |
+| 16   | Evaluation               | Quality, safety, latency         |
+| 17   | Production Architecture  | Cloud deployment                 |
+
+#### Training vs Inference
+
+| Training                  | Inference                   |
+| ------------------------- | --------------------------- |
+| Learn parameters          | Use learned parameters      |
+| Huge datasets             | User prompt                 |
+| Forward + backward        | Usually forward only        |
+| Compute gradients         | No gradient updates         |
+| Optimizer updates weights | Generate output             |
+| GPU/TPU clusters          | GPU/CPU/accelerator serving |
+
+#### LLM Lifecycle
+
+```bash
+Raw Data
+   ↓
+Cleaning & Filtering
+   ↓
+Tokenization
+   ↓
+Pretraining
+   ↓
+Base Model
+   ↓
+Instruction Tuning
+   ↓
+Preference / Alignment Training
+   ↓
+Evaluation
+   ↓
+Optimization
+   ↓
+Deployment
+   ↓
+Monitoring
 ```

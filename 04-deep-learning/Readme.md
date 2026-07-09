@@ -425,6 +425,24 @@ Updated Weights and Biases
 
 ### PyTorch Basics
 
+PyTorch is an open-source machine-learning and deep-learning framework used to build, train, evaluate, and deploy neural networks.
 
+> PyTorch = Tensors + Automatic Differentiation + Neural Networks + GPU Acceleration
 
+#### Core PyTorch Topics
 
+| Topic       | Meaning                         | Example             |
+| ----------- | ------------------------------- | ------------------- |
+| Tensor      | Multi-dimensional numeric array | `torch.tensor()`    |
+| Shape       | Tensor dimensions               | `[32, 7]`           |
+| Data Type   | Numeric representation          | `float32`           |
+| Device      | CPU/GPU location                | `cuda`              |
+| Autograd    | Automatic gradients             | `backward()`        |
+| `nn.Module` | Base neural-network class       | `DropoutNet`        |
+| Layer       | Trainable transformation        | `nn.Linear()`       |
+| Activation  | Non-linearity                   | `nn.ReLU()`         |
+| Loss        | Prediction error                | `BCEWithLogitsLoss` |
+| Optimizer   | Parameter update                | `Adam`              |
+| Dataset     | Data abstraction                | `Dataset`           |
+| DataLoader  | Mini-batch pipeline             | `DataLoader`        |
+| State Dict  | Model parameters                | `state_dict()`      |
