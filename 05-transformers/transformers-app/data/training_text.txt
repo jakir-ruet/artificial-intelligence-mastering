@@ -1,0 +1,5 @@
+Artificial intelligence is transforming software engineering.
+Transformers use self-attention to understand relationships between tokens.
+Machine learning models learn patterns from data.
+Deep learning uses neural networks with multiple layers.
+Large language models predict the next token in a sequence.
