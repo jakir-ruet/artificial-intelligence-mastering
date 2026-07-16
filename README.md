@@ -108,11 +108,12 @@ find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \)
 find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm -r {} +
 ```
 
-### Prompt
+### Prompt Engineering
 
-A prompt is the input (instruction, question, or text) that you give to an AI model to generate a response.
+Prompt Engineering is the active process of crafting, structuring, and refining the text you send to the AI. It includes your syntax, word choice, formatting (XML, Markdown), chain-of-thought prompting, and role-playing ("Act as a...").
 
 > Simply: `Prompt = What you tell the AI to do`
+> Prompt Engineering is the recipe (the instructions you give the AI).
 
 #### Prompt Types
 
@@ -125,6 +126,33 @@ A prompt is the input (instruction, question, or text) that you give to an AI mo
 | **Few-Shot**         | Multiple examples given        | `Bad → Negative`<br>`Great → Positive`<br>`Awesome →` |
 | **Role-Based**       | Assign a role                  | `Act as a DevOps engineer.`                           |
 | **Chain-of-Thought** | Ask for step-by-step reasoning | `Solve 25 × 12 step by step.`                         |
+
+### Context Engineering
+
+Context is the passive information that the AI uses to generate its response. This includes the system instructions, your current prompt, the chat history, any uploaded documents (RAG), and the AI's own internal knowledge.
+
+> Context is the ingredients (the raw material, background info, and constraints the AI has to work with).
+
+#### When we should learn Prompt & Context Engineering
+
+Prompt Engineering and Context Engineering should not be learned at the same time. They belong at different stages of your AI learning journey.
+
+| Stage  | Topic                      | Learn Prompt Engineering?    | Learn Context Engineering?    |
+| ------ | -------------------------- | ---------------------------- | ----------------------------- |
+| 1      | AI Fundamentals            | No                           | No                            |
+| 2      | Python & AI Math           | No                           | No                            |
+| 3      | Machine Learning           | No                           | No                            |
+| 4      | Deep Learning              | No                           | No                            |
+| 5      | Transformers               | No                           | No                            |
+| **6**  | **LLMs**                   | **Yes (start here)**         | No                            |
+| 7      | Generative AI              | Advanced                     | No                            |
+| 8      | Embeddings & Vector Search | Limited                      | Beginning concepts            |
+| **9**  | **RAG**                    | Yes                          | **Yes (important)**           |
+| **10** | **Agentic AI**             | Advanced                     | Yes Advanced                  |
+| 11     | Multimodal AI              | Yes                          | Yes                           |
+| 12     | AI Engineering             | Yes                          | Yes                           |
+| 13     | LLMOps/MLOps               | Production Prompt Management | Production Context Management |
+| 14     | Cloud AI Architecture      | Enterprise Scale             | Enterprise Scale              |
 
 ### Preprocessing & Feature Engineering Stack
 
