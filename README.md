@@ -112,8 +112,8 @@ find . -type d \( -name "__pycache__" -o -name ".ipynb_checkpoints" \) -exec rm 
 
 Prompt Engineering is the active process of crafting, structuring, and refining the text you send to the AI. It includes your syntax, word choice, formatting (XML, Markdown), chain-of-thought prompting, and role-playing ("Act as a...").
 
-> Simply: `Prompt = What you tell the AI to do`
-> Prompt Engineering is the recipe (the instructions you give the AI).
+> - Simply: `Prompt = What you tell the AI to do`
+> - Prompt Engineering is the recipe (the instructions you give the AI).
 
 #### Prompt Types
 
@@ -131,7 +131,7 @@ Prompt Engineering is the active process of crafting, structuring, and refining 
 
 Context is the passive information that the AI uses to generate its response. This includes the system instructions, your current prompt, the chat history, any uploaded documents (RAG), and the AI's own internal knowledge.
 
-> Context is the ingredients (the raw material, background info, and constraints the AI has to work with).
+> - Context is the ingredients (the raw material, background info, and constraints the AI has to work with).
 
 #### When we should learn Prompt & Context Engineering
 
