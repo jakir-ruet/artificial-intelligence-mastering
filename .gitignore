@@ -23,3 +23,6 @@
 04-deep-learning/student-dropout-dl/venv
 04-deep-learning/student-dropout-dl/api/__pycache__
 04-deep-learning/student-dropout-dl/src/__pycache__
+
+05-transformers/transformers-app/venv
+05-transformers/transformers-app/src/__pycache__

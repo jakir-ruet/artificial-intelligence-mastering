@@ -130,7 +130,17 @@ Predict Graduation Risk
 | Long Dependency     | No          | Weak                   | Strong                 |
 | Main Mechanism      | Convolution | Hidden State           | Gates + Cell State     |
 
-#### Transformer Main Components
+### Self-Attention: Query, Key, Value
+
+Self-attention is the core mechanism behind Transformers. Self-Attention allows each token to examine other tokens in the same sequence and decide which ones are most relevant.
+
+| Vector | Full Name | Purpose                          | Easy Analogy   |
+| ------ | --------- | -------------------------------- | -------------- |
+| **Q**  | Query     | What am I looking for?           | Search request |
+| **K**  | Key       | What information do I represent? | Search label   |
+| **V**  | Value     | What information do I provide?   | Actual content |
+
+### Transformer Main Components
 
 | Component            | Meaning                     |
 | -------------------- | --------------------------- |
@@ -145,12 +155,4 @@ Predict Graduation Risk
 | Encoder              | Understands input           |
 | Decoder              | Generates output            |
 
-### Self-Attention: Query, Key, Value
 
-Self-attention is the core mechanism behind Transformers. Self-Attention allows each token to examine other tokens in the same sequence and decide which ones are most relevant.
-
-| Vector | Full Name | Purpose                          | Easy Analogy   |
-| ------ | --------- | -------------------------------- | -------------- |
-| **Q**  | Query     | What am I looking for?           | Search request |
-| **K**  | Key       | What information do I represent? | Search label   |
-| **V**  | Value     | What information do I provide?   | Actual content |
